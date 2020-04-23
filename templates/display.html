@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/display.css') }}">
+
+<body>
+<div class="grid-container">
+    <div class="banner"></div>
+    <div class="advertisement"></div>
+    <div class="border"></div>
+    <div class="status">
+        <div class="status-message">
+            <div class="status-message-text">
+                <div id="status-message-text-id"></div>
+            </div>
+            <div class="status-message-icon">
+                <div id="status-message-icon-id"></div>
+            </div>
+        </div>
+    </div>
+    <div class="occupancy">
+        <div class="occupancy-data">
+            <div class="occupancy-max-text">MAXIMUM OCCUPENCY</div>
+            <div class="occupancy-max-count">
+                <div id="occupency-max-count-id"></div>
+            </div>
+            <div class="occupancy-current-text">CURRENT OCCUPENCY</div>
+            <div class="occupency-current-count">
+                <div id="occupency-current-count-id"></div>
+            </div>
+        </div>
+    </div>
+    <div class="in-out">
+        <div class="logo">
+            <div class="time"></div>
+            <div class="logo-image"></div>
+        </div>
+        <div class="in-out-data">
+            <div class="in-count">
+                <div id="in-count-id" style="color: #21211d"></div>
+            </div>
+            <div class="in-text">IN</div>
+            <div class="out-count">
+                <div id="out-count-id" style="color: #21211d"></div>
+            </div>
+            <div class="out-text">OUT</div>
+            <div class="add-data"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    timer = setInterval(update_screen, 2000);
+
+    function change_occupancy_color(color, value) {
+        document.getElementById("occupency-current-count-id").innerHTML = "<style>#occupency-current-count-id{" +
+            "background-color: " + color + "}</style>"+value;
+    }
+
+    function change_status_color(color, value) {
+        document.getElementById("status-message-text-id").innerHTML = "<style>#status-message-text-id{" +
+            "background-color: " + color + "}</style>"+value;
+    }
+
+    function change_occupancy_max_count(value) {
+        document.getElementById("occupency-max-count-id").innerHTML = value;
+    }
+    function change_in_out_color(value_in, value_out) {
+        document.getElementById("in-count-id").innerHTML = value_in;
+        document.getElementById("out-count-id").innerHTML = value_out;
+    }
+
+    function change_status_icon(status, color) {
+        document.getElementById("status-message-icon-id").innerHTML = "<img src=\"/get_icon/"+status+".png"+"\" >" +
+            "<style>#status-message-icon-id{" +
+            "background-color: " + "white" + "}</style>";
+    }
+
+
+    function update_screen() {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("data").innerHTML = this.responseText;
+
+                let response = JSON.parse(xhttp.responseText);
+
+                // if(response["current-occupancy"] >= response["maximum_occupancy"]){
+                //     change_occupancy_color(response["occupancy_color"])
+                // }
+                // document.getElementsByClassName("occupancy-current-count").innerHTML = response["current_occupancy"];
+                // document.getElementById("occupency-current-count-id").innerHTML = response["current_occupancy"];
+                change_occupancy_color(response["occupancy_color"],response["current_occupancy"] );
+                change_status_color(response["occupancy_color"], response["status"]);
+                change_occupancy_max_count(response["maximum_occupancy"]);
+                change_in_out_color(response["in_count"], response["out_count"]);
+                change_status_icon(response["status"], response["occupancy_color"])
+            }
+        };
+
+        xhttp.open("GET", "update_screen", true);
+        xhttp.send(null);
+    }
+</script>
+</body>
+</html>

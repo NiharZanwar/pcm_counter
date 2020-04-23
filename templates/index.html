@@ -1,0 +1,59 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax-test</title>
+</head>
+
+<body>
+realtime data is
+<div id="data">
+    0
+</div>
+
+<marque>hello</marque>
+<style>
+
+</style>
+<!--<button type="button" onclick="load()">Change Content</button>-->
+<script >
+    resource_timer = setInterval(send_req, 2000);
+
+    function color_change(color) {
+
+        document.getElementById("status").innerHTML = "<style>div{" +
+                    "background-color: "+color+"}</style>";
+    }
+
+    function send_req() {
+        // document.getElementById("data").innerHTML = "Here";
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("data").innerHTML = this.responseText;
+
+                if((parseInt(xhttp.responseText,10) % 3) == 0){
+                        color_change("red");
+                }
+                else {
+                    color_change("green");
+                }
+
+                document.getElementById("data").innerHTML = xhttp.responseText;
+
+            }};
+            xhttp.open("GET", "get_count", true);
+            xhttp.send(null);
+            // document.getElementById("data").innerHTML = xhttp.responseText;
+
+
+
+    }
+
+</script>
+<div id="status"></div>
+
+
+</body>
+</html>

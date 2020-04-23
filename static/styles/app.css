@@ -1,0 +1,119 @@
+  div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /*border: red;*/
+        /*border-width: 2px;*/
+        /*border-style: dotted;*/
+    }
+
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1.7fr 0.5fr 1.5fr 0.3fr;
+        gap: 1px 1px;
+        grid-template-areas: "in occupancy occupancy out" ". message message ." "advertisement advertisement advertisement advertisement" "banner banner banner banner";
+    }
+
+    .in {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.7fr 1.3fr;
+        gap: 1px 1px;
+        grid-template-areas: "in-text in-text in-text" "in-count in-count in-count";
+        grid-area: in;
+    }
+
+    .in-text {
+        display: flex;
+  justify-content: center;
+  align-items: center;
+        grid-area: in-text;
+        background-color: red;
+        /*text-align: center;*/
+        font-size: 50px;
+
+    }
+
+    .in-count {
+        display: flex;
+  justify-content: center;
+  align-items: center;
+        grid-area: in-count;
+        background-color: red;
+        text-align: center;
+        font-size: 50px;
+
+
+    }
+
+    .out {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.7fr 1.3fr;
+        gap: 1px 1px;
+        grid-template-areas: "out-text out-text out-text" "out-count out-count out-count";
+        grid-area: out;
+    }
+
+    .out-text {
+        grid-area: out-text;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        /*text-align: center;*/
+        font-size: 50px;
+    }
+
+    .out-count {
+        grid-area: out-count;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .occupancy {
+        grid-area: occupancy;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .message {
+        grid-area: message;
+    }
+
+    .banner {
+        grid-area: banner;
+    }
+
+    .advertisement {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "image1 image2 image3";
+        grid-area: advertisement;
+    }
+
+    .image1 {
+        grid-area: image1;
+    }
+
+    .image2 {
+        grid-area: image2;
+    }
+
+    .image3 {
+        grid-area: image3;
+    }
