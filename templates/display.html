@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>display</title>
 </head>
 
@@ -10,8 +10,14 @@
 
 <body>
 <div class="grid-container">
-    <div class="banner"></div>
-    <div class="advertisement"></div>
+    <div class="banner">
+        <marquee id="banner-id"><b>STAY SAFE. WEAR MASK. WASH HANDS. USE SANITIZER</b></marquee>
+    </div>
+    <div class="advertisement">
+        <div id="advertisement-id">
+            <img src="get_icon/soc-distance.jpg">
+        </div>
+    </div>
     <div class="border"></div>
     <div class="status">
         <div class="status-message">
@@ -25,11 +31,11 @@
     </div>
     <div class="occupancy">
         <div class="occupancy-data">
-            <div class="occupancy-max-text">MAXIMUM OCCUPENCY</div>
+            <div class="occupancy-max-text"><b>MAXIMUM OCCUPENCY</b></div>
             <div class="occupancy-max-count">
                 <div id="occupency-max-count-id"></div>
             </div>
-            <div class="occupancy-current-text">CURRENT OCCUPENCY</div>
+            <div class="occupancy-current-text"><b>CURRENT OCCUPENCY</b></div>
             <div class="occupency-current-count">
                 <div id="occupency-current-count-id"></div>
             </div>
@@ -38,7 +44,10 @@
     <div class="in-out">
         <div class="logo">
             <div class="time"></div>
-            <div class="logo-image"></div>
+            <div class="logo-image">
+                <div id="logo-image-id"><img src="get_icon/logo.png"></div>
+
+            </div>
         </div>
         <div class="in-out-data">
             <div class="in-count">
@@ -49,12 +58,14 @@
                 <div id="out-count-id" style="color: #21211d"></div>
             </div>
             <div class="out-text">OUT</div>
-            <div class="add-data"></div>
+            <div class="add-data">INDIA COVID-19 : 23,452</div>
         </div>
     </div>
 </div>
 
 <script>
+
+
     timer = setInterval(update_screen, 2000);
 
     function change_occupancy_color(color, value) {

@@ -1,6 +1,6 @@
 {
-    "current_occupancy": 52 ,
-    "maximum_occupancy": 55,
+    "current_occupancy": 56 ,
+    "maximum_occupancy": 10,
     "in_count":5,
     "out_count":60,
     "status":"",
