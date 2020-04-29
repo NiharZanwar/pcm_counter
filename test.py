@@ -1,20 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-
-# x = requests.get('http://192.168.1.100/cgi-bin/GetCounts.cgi?getReports&2020&04&23&60')
-# # http://<IP>/cgi-bin/GetCounts.cgi?getCounts
-#
-# print(x.text)
-#
-# open("data.xml", "w+").write(x.text)
-# root = ET.fromstring(x.text)
-# # print(root[0][2].attrib)
-# # my_dict=xmltodict.parse(x.text)
-# # print(my_dict)
-# # print(root[1].attrib["In"])
-#
-# for child in root[0]:
-#     print(type(child.attrib["In"]))
+import json
 
 
 def get_aotc(ip):
@@ -30,7 +16,6 @@ def get_aotc(ip):
 
     try:
         response = requests.get(url)
-        # print(response.text)
         if response.status_code != 200:
             data["success"] = 0
             return data
@@ -49,14 +34,9 @@ def get_aotc(ip):
         return data
 
 
-# print(get_aotc('192.168.1.100'))
-
-
 def get_day_count(ip, interval, day):
-
     url = "http://{}/cgi-bin/GetCounts.cgi?getReports&{}&{}&{}&{}".format(ip, day["year"], day["month"], day["day"],
                                                                           interval)
-    # print(url)
     data = {
         "success": 0,
         "in": 0,
@@ -66,7 +46,6 @@ def get_day_count(ip, interval, day):
     }
 
     try:
-        # print("here")
         response = requests.get(url)
         xml_root = ET.fromstring(response.text)
 
@@ -77,65 +56,72 @@ def get_day_count(ip, interval, day):
         data["occupancy"] = data["in"] - data["out"]
         data["success"] = 1
         return data
-
-
     except:
         data["success"] = 0
         return data
 
 
+def get_device_list():
+    device_list = []
+    try:
+        with open("config.json", "r+") as f:
+            config = json.load(f)
+            number_of_devices = config["number_of_devices"]
+
+            for i in range(0, number_of_devices):
+                device_status = {"ip": config["device_ip"][i],
+                                 "final_occ": 0,"final_in": 0, "final_out": 0,
+                                 "now_aotc": 0, "now_aotc_in": 0, "aotc_in_old": 0,
+                                 "now_aotc_out": 0, "aotc_out_old": 0,
+                                 "today_latest_in": 0, "today_latest_in_old": 0,
+                                 "today_latest_out": 0, "today_latest_out_old": 0,
+                                 "today_latest": 0, "active": True}
+
+                device_list.append(device_status)
+        f.close()
+        return device_list
+    except Exception as e:
+        print("error while reading config.json - {}".format(e))
+        f.close()
+        return 0
 
 
+def get_config_data():
 
-def get_data(ip, old_aotc, old_in, old_out):
-
-    data = {
-        "success": 0,
-        "in": 0,
-        "out": 0,
-        "occupancy": 0,
-        "datetime": '',
-        "now_aotc": 0, "now_in": 0, "now_out": 0
-    }
-
-    response = get_aotc(ip)
-    if response["success"] == 0:
-        return data
-    # 04 / 24 / 2020
-    now_aotc = response["occupancy"]
-    now_in = response["in"]
-    now_out = response["out"]
-
-    date = {
-        "day": response["datetime"].split(' ')[0].split('/')[1],
-        "year": response["datetime"].split(' ')[0].split('/')[2],
-        "month": response["datetime"].split(' ')[0].split('/')[0]
-    }
-
-    response2 = get_day_count(ip, '5', date)
-
-    print(response)
-    print(response2)
-
-    present_occupancy = response2["occupancy"] + now_aotc - old_aotc
-    present_in = response2["in"] + now_in - old_in
-    present_out = response2["out"] + now_out - old_out
-
-    data["occupancy"] = present_occupancy
-    data["in"] = present_in
-    data["out"] = present_out
-    data["now_aotc"] = now_aotc
-    data["now_in"] = now_in
-    data["now_out"] = now_out
-
-    return data
+    try:
+        with open("config.json", "r+") as f:
+            config = json.load(f)
+            f.close()
+            return config
+    except Exception as e:
+        print("error while reading config.json - {}".format(e))
+        f.close()
+        return 0
 
 
-#
-# date = {"day": "23", "year": "2020", "month": "04"}
-# result = get_day_count('192.168.1.100', '5', date)
+def set_config_data(data):
 
-# get_data('192.168.1.100', 0, 0, 0)
+    try:
+        with open("config.json", "w") as f:
+            f.write(data)
+            f.close()
+            return 1
+    except Exception as e:
+        print("error while writing to config file - {}".format(e))
+        return 0
 
-# print(result)
-# while
+
+def check_password(string):
+    try:
+        with open("password.txt", "r") as f:
+            password = f.read()
+            if string == password:
+                f.close()
+                return 1
+            else:
+                f.close()
+                return 0
+    except Exception as e:
+        print("error while checking password - {}".format(e))
+        return 0
+

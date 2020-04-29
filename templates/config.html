@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4CAF50"/>
+</head>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    input[type=number], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=text], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    label {
+
+    }
+
+    input[type=submit] {
+        width: 25%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    div.container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        align-content: center;
+        align-items: center;
+    }
+
+    input[type=number]:focus {
+        border: 3px solid #45a049;
+    }
+</style>
+
+<script>
+
+
+    function get_initial() {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("data").innerHTML = this.responseText;
+
+                let response = JSON.parse(xhttp.responseText);
+
+                if (response["success"] == 1) {
+                    document.getElementById("device-name").value = response["name"];
+                    document.getElementById("device-count").value = response["number_of_devices"];
+                    document.getElementById("ip-string").value = response["device_ip"];
+                } else {
+                    alert("error while reading config file");
+                }
+
+            }
+        };
+
+        xhttp.open("GET", "/config_values", true);
+        xhttp.send(null);
+    }
+
+    get_initial();
+
+    function update_config() {
+        // var xhttp_post = new XMLHttpRequest();
+        //
+        // var device_count = document.forms["config-form"][""];
+        // var device_name = document.getElementById("device-name").value;
+        // var ip_string = document.getElementById("ip-string").value;
+        //
+        //
+        // xhttp_post.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         let response = JSON.parse(xhttp_post.responseText);
+        //         if (response["success"] == 0) {
+        //             alert("Unsuccessful");
+        //         } else {
+        //             alert("settings updated successfully");
+        //             window.location.replace("/settings");
+        //             get_initial();
+        //         }
+        //     }
+        // };
+        //
+        //
+        // var myJSON = JSON.stringify(response);
+        //
+        // if(device_name.length == 0){
+        //     alert("here");
+        //     document.getElementById("device-name-result").innerHTML = 'please enter some name';
+        //     return false;
+        // }
+        // // xhttp_post.open("POST", "/settings_values", false);
+        // // xhttp_post.send(myJSON);
+
+        var device_name = document.getElementById("device-name").value;
+        var ip_string = document.getElementById("ip-string").value;
+        var device_count = document.getElementById("device-count").value;
+        var password = document.getElementById("password").value;
+
+        if(device_name.length == 0){
+            alert("device name is zero length");
+            return false;
+        }
+        if(device_count <= 0){
+            alert("enter positive value for device count");
+        }
+
+        if(ip_string.length == 0){
+            alert("ip string is zero length");
+            return false;
+        }
+
+        var ip_list = ip_string.split(',');
+
+        if(ip_list.length != device_count){
+            alert("check ip string format");
+            return false;
+        }
+        if(password.length == 0){
+            alert("enter password");
+            return false;
+        }
+
+        var change_config =  new XMLHttpRequest();
+        change_config.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("data").innerHTML = this.responseText;
+
+                let response = JSON.parse(change_config.responseText);
+
+                if (response["success"] == 1) {
+                    alert("Config updated successfully");
+                } else {
+                    alert(response["message"]);
+                }
+
+            }
+        };
+
+        values = {
+            "device_name":device_name,
+            "number_of_devices":device_count,
+            "ip_string":ip_list,
+            "password":password
+        }
+        var myJSON = JSON.stringify(values);
+        change_config.open("POST", "/config_values", false);
+        change_config.send(myJSON);
+        return true;
+    }
+
+</script>
+
+<body>
+
+
+<div class="container">
+    <h1>Configuration</h1>
+<!--    <form id="settings" name="config-form" >-->
+        <label for="device-name"><b>Device-Name</b></label>
+        <input type="text" id="device-name">
+        <div id="device-name-result"></div>
+
+        <label for="device-count"><b>Number of Devices</b></label>
+        <input type="number" id="device-count">
+        <div id="device-count-result"></div>
+
+        <label for="ip-string"><b>IP Addresses String. eg - "192.168.1.111,192.168.1.100" is for two devices</b></label>
+        <input type="text" id="ip-string">
+        <div id="ip-string-result"></div>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password">
+
+        <input type="submit" value="Update" onclick="update_config()">
+<!--    </form>-->
+
+</div>
+
+</body>
+</html>

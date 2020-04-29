@@ -63,33 +63,61 @@
     </div>
 </div>
 
+
+<audio id="stop-audio">
+    <!--  <source src="horse.ogg" type="audio/ogg">-->
+    <source src="/get_icon/STOP.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 
+    var current_status =
 
     timer = setInterval(update_screen, 2000);
 
     function change_occupancy_color(color, value) {
         document.getElementById("occupency-current-count-id").innerHTML = "<style>#occupency-current-count-id{" +
-            "background-color: " + color + "}</style>"+value;
+            "background-color: " + color + "}</style>" + value;
     }
 
     function change_status_color(color, value) {
         document.getElementById("status-message-text-id").innerHTML = "<style>#status-message-text-id{" +
-            "background-color: " + color + "}</style>"+value;
+            "background-color: " + color + "}</style>" + value;
     }
 
     function change_occupancy_max_count(value) {
         document.getElementById("occupency-max-count-id").innerHTML = value;
     }
+
     function change_in_out_color(value_in, value_out) {
         document.getElementById("in-count-id").innerHTML = value_in;
         document.getElementById("out-count-id").innerHTML = value_out;
     }
 
     function change_status_icon(status, color) {
-        document.getElementById("status-message-icon-id").innerHTML = "<img src=\"/get_icon/"+status+".png"+"\" >" +
+        document.getElementById("status-message-icon-id").innerHTML = "<img src=\"/get_icon/" + status + ".png" + "\" >" +
             "<style>#status-message-icon-id{" +
             "background-color: " + "white" + "}</style>";
+    }
+
+    function play_audio(status){
+        var myAudio = document.getElementById('stop-audio');
+
+        if (myAudio.duration > 0 && !myAudio.paused) {
+            return 0;
+            //Its playing...do your job
+
+        } else {
+            if(status == "STOP"){
+                myAudio.play();
+                return 0;
+            }
+            else{
+                return 0;
+            }
+            //Not playing...maybe paused, stopped or never played.
+
+        }
     }
 
 
@@ -107,11 +135,13 @@
                 // }
                 // document.getElementsByClassName("occupancy-current-count").innerHTML = response["current_occupancy"];
                 // document.getElementById("occupency-current-count-id").innerHTML = response["current_occupancy"];
-                change_occupancy_color(response["occupancy_color"],response["current_occupancy"] );
+                change_occupancy_color(response["occupancy_color"], response["occupancy"]);
                 change_status_color(response["occupancy_color"], response["status"]);
                 change_occupancy_max_count(response["maximum_occupancy"]);
-                change_in_out_color(response["in_count"], response["out_count"]);
-                change_status_icon(response["status"], response["occupancy_color"])
+                change_in_out_color(response["in"], response["out"]);
+                change_status_icon(response["status"], response["occupancy_color"]);
+
+                play_audio(response["status"]);
             }
         };
 
