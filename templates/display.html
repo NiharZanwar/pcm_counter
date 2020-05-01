@@ -15,7 +15,7 @@
     </div>
     <div class="advertisement">
         <div id="advertisement-id">
-            <img src="get_icon/soc-distance.jpg">
+            <img src="get_icon/ad.jpg">
         </div>
     </div>
     <div class="border"></div>
@@ -31,7 +31,7 @@
     </div>
     <div class="occupancy">
         <div class="occupancy-data">
-            <div class="occupancy-max-text"><b>MAXIMUM OCCUPENCY</b></div>
+            <div class="occupancy-max-text"><b>MAX OCCUPENCY</b></div>
             <div class="occupancy-max-count">
                 <div id="occupency-max-count-id"></div>
             </div>
@@ -45,7 +45,7 @@
         <div class="logo">
             <div class="time"></div>
             <div class="logo-image">
-                <div id="logo-image-id"><img src="get_icon/logo.png"></div>
+                <div id="logo-image-id" style="background-color: lightyellow"><img src="get_icon/logo.png"></div>
 
             </div>
         </div>
@@ -65,7 +65,6 @@
 
 
 <audio id="stop-audio">
-    <!--  <source src="horse.ogg" type="audio/ogg">-->
     <source src="/get_icon/STOP.mp3" type="audio/mpeg">
 </audio>
 
@@ -126,15 +125,8 @@
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                // document.getElementById("data").innerHTML = this.responseText;
 
                 let response = JSON.parse(xhttp.responseText);
-
-                // if(response["current-occupancy"] >= response["maximum_occupancy"]){
-                //     change_occupancy_color(response["occupancy_color"])
-                // }
-                // document.getElementsByClassName("occupancy-current-count").innerHTML = response["current_occupancy"];
-                // document.getElementById("occupency-current-count-id").innerHTML = response["current_occupancy"];
                 change_occupancy_color(response["occupancy_color"], response["occupancy"]);
                 change_status_color(response["occupancy_color"], response["status"]);
                 change_occupancy_max_count(response["maximum_occupancy"]);

@@ -2,7 +2,7 @@ from flask import Flask, render_template, send_from_directory, request
 import time
 import json
 import os
-from test import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password
+from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password
 from _thread import *
 from datetime import datetime
 
@@ -226,6 +226,39 @@ def config_values():
 
         return json.dumps(response)
 
+@app.route('/upload_images', methods=['GET', 'POST'])
+def upload_images():
+    if request.method == 'GET':
+
+        return render_template('upload_images.html')
+    if request.method == 'POST':
+
+        allowed = ['jpg', 'png']
+        if 'ad' in request.files:
+            file = request.files['ad']
+            try:
+                if file.filename.split('.')[1].lower() not in allowed:
+                    return render_template('upload_images.html', data='please upload file with extension ".jpg",".png"')
+            except IndexError:
+                return render_template('upload_images.html', data='please upload 1 file atleast')
+
+            file.filename = 'ad.' + file.filename.split('.')[1].lower()
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            return render_template('upload_images.html')
+
+        if 'logo' in request.files:
+
+            file = request.files['logo']
+            try:
+                if file.filename.split('.')[1].lower() not in allowed:
+                    return render_template('upload_images.html', data='please upload file with extension ".jpg",".png"')
+            except IndexError:
+                return render_template('upload_images.html', data='please upload 1 file atleast')
+
+            file.filename = 'logo.' + file.filename.split('.')[1].lower()
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            return render_template('upload_images.html')
+
 
 if __name__ == '__main__':
 
@@ -250,4 +283,6 @@ if __name__ == '__main__':
 
 # todo refine css and html
 # todo create themes
+# todo add provision to add advertisement picture
+
 
