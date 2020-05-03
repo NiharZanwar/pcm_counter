@@ -13,7 +13,7 @@ def logging(string):
 
 def get_aotc(ip):
     url = "http://{}/cgi-bin/GetCounts.cgi?getCounts".format(ip)
-    print(url)
+    # print(url)
     data = {
         "success": 0,
         "in": 0,

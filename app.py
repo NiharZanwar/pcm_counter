@@ -2,7 +2,8 @@ from flask import Flask, render_template, send_from_directory, request
 import time
 import json
 import os
-from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password, restart_app
+from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password,\
+    restart_app, logging
 from _thread import *
 from datetime import datetime
 import for_restart
@@ -111,7 +112,7 @@ def maintain_device_list():
                         "month": response["datetime"].split(' ')[0].split('/')[0]
                     }
                 except:
-                    print("Error while parsing datetime" + response["datetime"])
+                    logging("Error while parsing datetime" + response["datetime"])
                     date = {
                         "day": datetime.now().strftime("%d"),
                         "year": datetime.now().strftime("%m"),
