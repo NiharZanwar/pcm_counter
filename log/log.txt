@@ -1,0 +1,276 @@
+2020/05/02 19:01:39
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92cd1f8390>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:01:39
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4bed32a6d8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:00
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4bec07da90>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:00
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92ccfee630>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:07
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4bec07d9e8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:07
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92ce2b4828>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:14
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4bec09f320>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:14
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92ccfbcc88>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:04:18
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f4bec09f9b0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:04:18
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92ccfbcda0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:04:28
+Error - child index out of range
+
+2020/05/02 19:04:28
+Error - child index out of range
+
+2020/05/02 19:08:03
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec7327d30>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:08:03
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d53bee400>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:04
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539b3f98>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:04
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec605a438>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:11
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec4bc09e8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:11
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539b3c88>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:19
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539ca320>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:19
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec4bcf240>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539ca9b0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec72d80b8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:33
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539d7080>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:33
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec6030908>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:40
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec6060cf8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:40
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539d7710>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:47
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec6060a58>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:47
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539ca978>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:54
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539ca128>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:09:54
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec6030978>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:01
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec605a0f0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:01
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539b37f0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec4bcf390>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d54ca8c18>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:15
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539d70f0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:15
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec4bcfba8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539d7da0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec605aeb8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:10:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec72dfb00>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:10:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d539d7ba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:10:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8d53bee320>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:10:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbec6030d30>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+2020/05/02 19:10:39
+Error - child index out of range
+
+2020/05/02 19:10:39
+Error - child index out of range
+
+2020/05/02 19:23:12
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8249ecf7b8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:44:37
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f6c7da28780>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:57:33
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7beb06b780>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 19:57:33
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcc05087f0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:38
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9df07b8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:38
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf25aa90>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:45
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be8958160>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:45
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf25a550>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:52
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9df0390>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:52
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272320>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:59
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9de0240>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:03:59
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf2729b0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:06
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf27f080>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:06
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be895c748>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:13
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9df0f28>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:13
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf27f710>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272978>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9dbf5c0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:27
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be8958240>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:27
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272128>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:34
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf25aa58>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:34
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be895f828>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:41
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcc054f908>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:41
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be895f4a8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:48
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be8958940>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:48
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf27f0f0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:55
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf27fda0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:04:55
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9dbfb00>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:05:03
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf27fba8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:05:03
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9df0ac8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:05:10
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcc05002b0>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:05:10
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9de0eb8>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:05:14
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9de04a8>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:14
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf25ac18>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:18
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9df0128>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:18
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf25acf8>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be9dbfb00>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272278>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be8958748>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272908>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be895fcc0>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf28b470>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:34
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272e80>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:34
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be89586a0>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:38
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7efcbf272780>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:05:38
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f7be8958518>: Failed to establish a new connection: [Errno 101] Network is unreachable',))
+
+2020/05/02 20:07:46
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f18e4d24a90>: Failed to establish a new connection: [Errno 113] No route to host',))
+
+2020/05/02 20:07:46
+Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff4d9a0e550>: Failed to establish a new connection: [Errno 113] No route to host',))
+
