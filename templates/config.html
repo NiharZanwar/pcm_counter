@@ -64,6 +64,11 @@
 
 <script>
 
+    function restart_server() {
+        var restart = new XMLHttpRequest();
+        restart.open("GET", "/restart_app", true);
+        restart.send(null);
+    }
 
     function get_initial() {
         var xhttp = new XMLHttpRequest();
@@ -92,36 +97,6 @@
     get_initial();
 
     function update_config() {
-        // var xhttp_post = new XMLHttpRequest();
-        //
-        // var device_count = document.forms["config-form"][""];
-        // var device_name = document.getElementById("device-name").value;
-        // var ip_string = document.getElementById("ip-string").value;
-        //
-        //
-        // xhttp_post.onreadystatechange = function () {
-        //     if (this.readyState == 4 && this.status == 200) {
-        //         let response = JSON.parse(xhttp_post.responseText);
-        //         if (response["success"] == 0) {
-        //             alert("Unsuccessful");
-        //         } else {
-        //             alert("settings updated successfully");
-        //             window.location.replace("/settings");
-        //             get_initial();
-        //         }
-        //     }
-        // };
-        //
-        //
-        // var myJSON = JSON.stringify(response);
-        //
-        // if(device_name.length == 0){
-        //     alert("here");
-        //     document.getElementById("device-name-result").innerHTML = 'please enter some name';
-        //     return false;
-        // }
-        // // xhttp_post.open("POST", "/settings_values", false);
-        // // xhttp_post.send(myJSON);
 
         var device_name = document.getElementById("device-name").value;
         var ip_string = document.getElementById("ip-string").value;
@@ -173,10 +148,12 @@
             "number_of_devices":device_count,
             "ip_string":ip_list,
             "password":password
-        }
+        };
+
         var myJSON = JSON.stringify(values);
         change_config.open("POST", "/config_values", false);
         change_config.send(myJSON);
+        restart_server();
         return true;
     }
 

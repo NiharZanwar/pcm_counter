@@ -1,11 +1,19 @@
 import requests
 import xml.etree.ElementTree as ET
 import json
+from datetime import datetime
+
+
+def logging(string):
+    string = datetime.now().strftime("%Y/%m/%d %H:%M:%S") + '\n' + string + '\n\n'
+    with open('log/log.txt', "a+") as f:
+        f.write(string)
+        f.close()
 
 
 def get_aotc(ip):
     url = "http://{}/cgi-bin/GetCounts.cgi?getCounts".format(ip)
-
+    print(url)
     data = {
         "success": 0,
         "in": 0,
@@ -29,7 +37,7 @@ def get_aotc(ip):
         return data
 
     except Exception as e:
-        print("Error - {}".format(e))
+        logging("Error - {}".format(e))
         data["success"] = 0
         return data
 
@@ -56,7 +64,8 @@ def get_day_count(ip, interval, day):
         data["occupancy"] = data["in"] - data["out"]
         data["success"] = 1
         return data
-    except:
+    except Exception as e:
+        logging("error in get day count - {}".format(e))
         data["success"] = 0
         return data
 
@@ -75,13 +84,13 @@ def get_device_list():
                                  "now_aotc_out": 0, "aotc_out_old": 0,
                                  "today_latest_in": 0, "today_latest_in_old": 0,
                                  "today_latest_out": 0, "today_latest_out_old": 0,
-                                 "today_latest": 0, "active": True}
+                                 "today_latest": 0, "active": True, "live_status": 1}
 
                 device_list.append(device_status)
         f.close()
         return device_list
     except Exception as e:
-        print("error while reading config.json - {}".format(e))
+        logging("error while reading config.json - {}".format(e))
         f.close()
         return 0
 
@@ -94,7 +103,7 @@ def get_config_data():
             f.close()
             return config
     except Exception as e:
-        print("error while reading config.json - {}".format(e))
+        logging("error while reading config.json - {}".format(e))
         f.close()
         return 0
 
@@ -107,7 +116,7 @@ def set_config_data(data):
             f.close()
             return 1
     except Exception as e:
-        print("error while writing to config file - {}".format(e))
+        logging("error while writing to config file - {}".format(e))
         return 0
 
 
@@ -122,6 +131,9 @@ def check_password(string):
                 f.close()
                 return 0
     except Exception as e:
-        print("error while checking password - {}".format(e))
+        logging("error while checking password - {}".format(e))
         return 0
 
+def restart_app():
+    with open("for_restart.py", "w+") as f:
+        f.write("value = '{}'".format(datetime.now().strftime("%Y/%m/%d %H:%M:%S")))

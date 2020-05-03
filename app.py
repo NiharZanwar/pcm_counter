@@ -2,9 +2,10 @@ from flask import Flask, render_template, send_from_directory, request
 import time
 import json
 import os
-from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password
+from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password, restart_app
 from _thread import *
 from datetime import datetime
+import for_restart
 
 global total_all_in, total_all_out
 
@@ -17,6 +18,28 @@ def print_my_data():
     print(device_list)
     print("total_all_occ", total_all_occ)
     time.sleep(4)
+
+
+def get_live_devices():
+    global device_list
+    total_devices = len(device_list)
+    active_devices = []
+    inactive_devices = []
+    for device in device_list:
+        if device["live_status"] == 1:
+            active_devices.append(device["ip"])
+        else:
+            inactive_devices.append((device["ip"]))
+
+    response = {
+        "total_devices": total_devices,
+        "active_number": len(active_devices),
+        "active_devices": active_devices,
+        "inactive_number": len(inactive_devices),
+        "inactive_devices": inactive_devices
+    }
+
+    return response
 
 
 def get_final_realtime_counts():
@@ -65,6 +88,7 @@ def maintain_device_list():
         result = get_aotc(device["ip"])
         if result["success"] == 0:
             device["active"] = False
+            device["live_status"] = 0
             continue
 
     while 1:
@@ -73,9 +97,10 @@ def maintain_device_list():
 
                 response = get_aotc(device["ip"])
                 if response["success"] == 0:
+                    device["live_status"] = 0
                     time.sleep(2)
                     continue
-
+                device["live_status"] = 1
                 device["now_aotc"] = response["occupancy"]
                 device["now_aotc_in"] = response["in"]
                 device["now_aotc_out"] = response["out"]
@@ -128,14 +153,20 @@ def get_settings_values():
             response = {
                 "offset": config["relative_offset"],
                 "success": 1,
-                "maximum-occupancy": config["maximum_occupancy"]
+                "maximum-occupancy": config["maximum_occupancy"],
+                "audio-stop": config["audio-stop"],
+                "audio-go": config["audio-go"]
             }
             return json.dumps(response)
     elif request.method == 'POST':
+
         config = get_config_data()
         json_response = json.loads(request.get_data(as_text=True))
         config["relative_offset"] = int(json_response["offset"])
         config["maximum_occupancy"] = int(json_response["maximum_occupancy"])
+        config["audio-stop"] = int(json_response["audio-stop"])
+        config["audio-go"] = int(json_response["audio-go"])
+
         if set_config_data(json.dumps(config)) == 0:
             return json.dumps({"success": 0})
         else:
@@ -155,7 +186,10 @@ def hello_name():
         "status": "",
         "occupancy_color": "",
         "maximum_occupancy": 0,
-        "config_error": False
+        "config_error": False,
+        "audio-stop": 1,
+        "audio-go": 1,
+        "live_status": get_live_devices()
     }
 
     config = get_config_data()
@@ -171,8 +205,10 @@ def hello_name():
     else:
         total_result["status"] = "GO"
         total_result["occupancy_color"] = "darkgreen"
-
+    total_result["audio-stop"] = config["audio-stop"]
+    total_result["audio-go"] = config["audio-go"]
     total_result["success"] = 1
+
     return json.dumps(total_result)
 
 
@@ -258,6 +294,18 @@ def upload_images():
             file.filename = 'logo.' + file.filename.split('.')[1].lower()
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
             return render_template('upload_images.html')
+
+
+@app.route('/restart_app', methods=['GET'])
+def restart():
+    restart_app()
+    return 'success'
+
+
+@app.route('/live_status', methods=['GET'])
+def live_status():
+    response = get_live_devices()
+    return json.dumps(response)
 
 
 if __name__ == '__main__':

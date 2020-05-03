@@ -43,7 +43,10 @@
     </div>
     <div class="in-out">
         <div class="logo">
-            <div class="time"></div>
+            <div class="time">
+                <div id="reload-image-id" style="background-color: lightyellow"><img src="get_icon/reload.png" onclick="reload_screen()"></div>
+
+            </div>
             <div class="logo-image">
                 <div id="logo-image-id" style="background-color: lightyellow"><img src="get_icon/logo.png"></div>
 
@@ -58,7 +61,9 @@
                 <div id="out-count-id" style="color: #21211d"></div>
             </div>
             <div class="out-text">OUT</div>
-            <div class="add-data">INDIA COVID-19 : 23,452</div>
+            <div class="add-data">
+                <div id="add-data-id"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -66,13 +71,21 @@
 
 <audio id="stop-audio">
     <source src="/get_icon/STOP.mp3" type="audio/mpeg">
+<!--    <source src="/get_icon/GO.mp3" type="audio/mpeg">-->
+</audio>
+<audio id="go-audio">
+<!--    <source src="/get_icon/STOP.mp3" type="audio/mpeg">-->
+    <source src="/get_icon/GO.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
-    var current_status =
-
     timer = setInterval(update_screen, 2000);
+
+    function change_add_data(live_status) {
+        var device_status = "Active Devices : " + live_status["active_number"] + ' / ' + live_status["total_devices"];
+        document.getElementById("add-data-id").innerText = device_status;
+    }
 
     function change_occupancy_color(color, value) {
         document.getElementById("occupency-current-count-id").innerHTML = "<style>#occupency-current-count-id{" +
@@ -99,16 +112,20 @@
             "background-color: " + "white" + "}</style>";
     }
 
-    function play_audio(status){
-        var myAudio = document.getElementById('stop-audio');
-
-        if (myAudio.duration > 0 && !myAudio.paused) {
+    function play_audio(status, stop_enable, go_enable){
+        var stop_audio = document.getElementById('stop-audio');
+        var go_audio = document.getElementById('go-audio');
+        if ((stop_audio.duration > 0 && !stop_audio.paused) || (go_audio.duration > 0 && !go_audio.paused)) {
             return 0;
             //Its playing...do your job
 
         } else {
-            if(status == "STOP"){
-                myAudio.play();
+            if(status == "STOP" && (stop_enable == 1)){
+                stop_audio.play();
+                return 0;
+            }
+            if(status == "GO" && (go_enable == 1)){
+                go_audio.play();
                 return 0;
             }
             else{
@@ -132,13 +149,18 @@
                 change_occupancy_max_count(response["maximum_occupancy"]);
                 change_in_out_color(response["in"], response["out"]);
                 change_status_icon(response["status"], response["occupancy_color"]);
-
-                play_audio(response["status"]);
+                change_add_data(response["live_status"]);
+                play_audio(response["status"], response["audio-stop"],response["audio-go"]);
             }
         };
 
         xhttp.open("GET", "update_screen", true);
         xhttp.send(null);
+    }
+
+
+    function reload_screen() {
+        location.reload();
     }
 </script>
 </body>

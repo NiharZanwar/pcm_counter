@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 
 <html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#4CAF50" /></head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4CAF50"/>
+</head>
 <style>
-body {
-  font-family: Arial;
-}
+    body {
+        font-family: Arial;
+    }
 
-input[type=number], select {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-label{
+    input[type=number], select {
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 
-}
-input[type=submit] {
-  width: 25%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    label {
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+    }
 
-div.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-    align-content: center;
-    align-items: center;
-}
+    input[type=submit] {
+        width: 25%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    div.container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        align-content: center;
+        align-items: center;
+    }
 
     input[type=number]:focus {
-  border: 3px solid #45a049;
-}
+        border: 3px solid #45a049;
+    }
 </style>
 
 <script>
@@ -54,24 +58,37 @@ div.container {
     function get_initial() {
         var xhttp = new XMLHttpRequest();
 
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            // document.getElementById("data").innerHTML = this.responseText;
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // document.getElementById("data").innerHTML = this.responseText;
 
-            let response = JSON.parse(xhttp.responseText);
+                let response = JSON.parse(xhttp.responseText);
 
-            if (response["success"] == 1){
-                document.getElementById("offset").value = response["offset"];
-                document.getElementById("maximum-occupancy").value = response["maximum-occupancy"];
-            } else {
-                alert("error while reading config file");
+                if (response["success"] == 1) {
+                    document.getElementById("offset").value = response["offset"];
+                    document.getElementById("maximum-occupancy").value = response["maximum-occupancy"];
+
+                    if (response["audio-stop"] == 1) {
+                        document.getElementById("stop-enable").value = 1;
+                    } else {
+                        document.getElementById("stop-enable").value = 0;
+                    }
+
+                    if (response["audio-go"] == 1) {
+                        document.getElementById("go-enable").value = 1;
+                    } else {
+                        document.getElementById("go-enable").value = 0;
+                    }
+
+                } else {
+                    alert("error while reading config file");
+                }
+
             }
+        };
 
-        }
-    };
-
-    xhttp.open("GET", "/settings_values", true);
-    xhttp.send(null);
+        xhttp.open("GET", "/settings_values", true);
+        xhttp.send(null);
     }
 
     get_initial();
@@ -81,22 +98,26 @@ div.container {
 
         var offset = document.getElementById("offset").value;
         var maximum_occupancy = document.getElementById("maximum-occupancy").value;
-
+        var audio_stop = document.getElementById("stop-enable").value;
+        var audio_go = document.getElementById("go-enable").value;
         var response = {
-            "maximum_occupancy":maximum_occupancy,
-            "offset":offset
+            "maximum_occupancy": maximum_occupancy,
+            "offset": offset,
+            "audio-stop":audio_stop,
+            "audio-go":audio_go
         }
 
         xhttp_post.onreadystatechange = function () {
-             if (this.readyState == 4 && this.status == 200) {
-                 let response = JSON.parse(xhttp_post.responseText);
-                 if(response["success"] == 0){
-                     alert("Unsuccessful");
-                 }else{
-                 alert("settings updated successfully");
-                 window.location.replace("/settings");
-                 get_initial();
-             }}
+            if (this.readyState == 4 && this.status == 200) {
+                let response = JSON.parse(xhttp_post.responseText);
+                if (response["success"] == 0) {
+                    alert("Unsuccessful");
+                } else {
+                    alert("settings updated successfully");
+                    window.location.replace("/settings");
+                    get_initial();
+                }
+            }
         };
 
         var myJSON = JSON.stringify(response);
@@ -112,19 +133,31 @@ div.container {
 
 <div class="container">
     <h1>Settings</h1>
-  <form id="settings">
-     <label for="offset"><b>Offset</b></label>
-    <input type="number" id="offset" name="Offset">
+    <form id="settings">
+        <label for="offset"><b>Offset</b></label>
+        <input type="number" id="offset" name="Offset">
 
-    <label for="maximum-occupancy"><b>Maximum Occupancy</b></label>
-    <input type="number" id="maximum-occupancy" name="Maximum Occupancy"  >
+        <label for="maximum-occupancy"><b>Maximum Occupancy</b></label>
+        <input type="number" id="maximum-occupancy" name="Maximum Occupancy">
 
+        <label for="stop-enable"><b>Stop Audio Enable</b></label>
+        <select id="stop-enable">
+            <option value="1">Enable</option>
+            <option value="0">Disable</option>
 
+        </select>
 
-    <input type="submit" value="Update" onclick="update_settings()">
-      </form >
+        <label for="go-enable"><b>Go Audio Enable</b></label>
+        <select id="go-enable">
+            <option value="1">Enable</option>
+            <option value="0">Disable</option>
 
-    </div>
+        </select>
+
+        <input type="submit" value="Update" onclick="update_settings()">
+    </form>
+
+</div>
 
 </body>
 </html>

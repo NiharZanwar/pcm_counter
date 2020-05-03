@@ -245,6 +245,16 @@
     color: lightyellow;
 }
 
+#add-data-id{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+    color: white;
+}
 
 /*div.status-message-text {*/
 /*    !*position: absolute;*!*/
@@ -346,3 +356,4 @@ img{
         max-height: 100%;
         display: block; /* remove extra space below image */
     }
+

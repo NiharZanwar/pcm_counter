@@ -1,16 +1,16 @@
-from selenium import webdriver
-
-fp = webdriver.FirefoxProfile()
-# fp.set_preference('media.autoplay.default', "0")
-fp.set_preference('media.autoplay.enabled', "True")
-
-
-driver = webdriver.Firefox(fp)
-
-url = 'http://localhost:5000/home'
-driver.get(url)
-
-driver.fullscreen_window()
+# from selenium import webdriver
+#
+# fp = webdriver.FirefoxProfile()
+# # fp.set_preference('media.autoplay.default', "0")
+# fp.set_preference('media.autoplay.enabled', "True")
+#
+#
+# driver = webdriver.Firefox(fp)
+#
+# url = 'http://localhost:5000/home'
+# driver.get(url)
+#
+# driver.fullscreen_window()
 # # import time
 # #
 # # from test import get_aotc, get_day_count, get_device_list
@@ -34,7 +34,7 @@ driver.fullscreen_window()
 # from gtts import gTTS
 # import os
 #
-# mytext = 'Please stop. Maximum occupancy reached'
+# mytext = 'Follow social Distancing. Wear Mask'
 #
 # # Language in which you want to convert
 # language = 'en'
@@ -47,7 +47,11 @@ driver.fullscreen_window()
 #
 # # Saving the converted audio in a mp3 file named
 # # welcome
-# myobj.save("STOP.mp3")
+# myobj.save("GO.mp3")
 #
 # # Playing the converted file
-# os.system("ffplay STOP.mp3")
+# os.system("ffplay GO.mp3")
+
+import requests
+
+response = requests.get("http://192.168.1.101/cgi-bin/GetCounts.cgi?getCounts", timeout=1)
