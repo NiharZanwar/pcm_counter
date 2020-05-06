@@ -51,7 +51,9 @@
 #
 # # Playing the converted file
 # os.system("ffplay GO.mp3")
+#
+# import requests
+#
+# response = requests.get("http://192.168.1.101/cgi-bin/GetCounts.cgi?getCounts", timeout=1)
 
-import requests
-
-response = requests.get("http://192.168.1.101/cgi-bin/GetCounts.cgi?getCounts", timeout=1)
+print("heool")

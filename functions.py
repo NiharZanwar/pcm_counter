@@ -134,6 +134,49 @@ def check_password(string):
         logging("error while checking password - {}".format(e))
         return 0
 
+
 def restart_app():
     with open("for_restart.py", "w+") as f:
         f.write("value = '{}'".format(datetime.now().strftime("%Y/%m/%d %H:%M:%S")))
+
+
+def get_network_data():
+
+    try:
+        with open("network/network.json", "r+") as f:
+            config = json.load(f)
+            f.close()
+            return config
+    except Exception as e:
+        logging("error while reading network.json - {}".format(e))
+        f.close()
+        return 0
+
+
+def set_network_data(data):
+
+    try:
+        with open("network/network.json", "w") as f:
+            f.write(data)
+            f.close()
+            return 1
+    except Exception as e:
+        logging("error while writing to config file - {}".format(e))
+        return 0
+
+def restart_network():
+    config = get_network_data()
+    if config == 0:
+        return 0
+
+    try:
+        with open("network/dhcpcd-dynamic.txt", "w") as f:
+            string = "static ip_address="+config["device_ip"] + '\n'
+            string += "static routers="+config["default_gateway"] + '\n'
+            string += "static domain_name_servers="+config["dns_server"]+' '+config["dns_server2"]
+            f.write(string)
+            f.close()
+            return 1
+    except Exception as e:
+        logging("error while writing to dhcpcd-dynamic.txt - {}".format(e))
+        return 0

@@ -3,7 +3,7 @@ import time
 import json
 import os
 from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password,\
-    restart_app, logging
+    restart_app, logging, get_network_data, set_network_data, restart_network
 from _thread import *
 from datetime import datetime
 import for_restart
@@ -243,7 +243,7 @@ def config_values():
         data = request.get_data(as_text=True)
         json_data = json.loads(data)
 
-        print(data)
+        # print(data)
         response = {
             "success": 1,
             "message": ""
@@ -307,6 +307,50 @@ def restart():
 def live_status():
     response = get_live_devices()
     return json.dumps(response)
+
+
+@app.route('/network_settings', methods=['GET'])
+def network_settings():
+    return render_template('network_settings.html')
+
+
+@app.route('/network_values',methods=['POST','GET'])
+def network_values():
+    if request.method == 'GET':
+        config = get_network_data()
+        if config == 0:
+            return json.dumps({"success": 0})
+        else:
+            config["success"] = 1
+            return json.dumps(config)
+
+    if request.method == 'POST':
+        data = request.get_data(as_text=True)
+        json_data = json.loads(data)
+
+        # print(data)
+        response = {
+            "success": 1,
+            "message": ""
+        }
+        if check_password(json_data["password"]) == 0:
+            response["success"] = 0
+            response["message"] = 'Password is wrong'
+            return json.dumps(response)
+
+        config = get_network_data()
+
+        config["device_ip"] = json_data["device_ip"]
+        config["default_gateway"] = json_data["default_gateway"]
+        config["dns_server"] = json_data["dns_server"]
+        config["dns_server2"] = json_data["dns_server2"]
+
+        set_network_data(json.dumps(config))
+        restart_network()
+
+        return json.dumps(response)
+
+
 
 
 if __name__ == '__main__':

@@ -274,3 +274,39 @@ Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded 
 2020/05/02 20:07:46
 Error - HTTPConnectionPool(host='192.168.1.101', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff4d9a0e550>: Failed to establish a new connection: [Errno 113] No route to host',))
 
+2020/05/06 15:38:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb31d880>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+2020/05/06 15:38:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a7563ffa0>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+2020/05/06 15:38:15
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb2c9070>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:15
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a74dd94c0>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a74dd9c70>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb2c9820>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb2c9fd0>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a74dc9460>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:37
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a74dc9c10>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:37
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb2cb7c0>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:44
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f3a74546400>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/06 15:38:44
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbfbb2c9850>: Failed to establish a new connection: [Errno 113] No route to host'))
+
