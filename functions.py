@@ -73,7 +73,7 @@ def get_day_count(ip, interval, day):
 def get_device_list():
     device_list = []
     try:
-        with open("config.json", "r+") as f:
+        with open("config/config.json", "r+") as f:
             config = json.load(f)
             number_of_devices = config["number_of_devices"]
 
@@ -98,7 +98,7 @@ def get_device_list():
 def get_config_data():
 
     try:
-        with open("config.json", "r+") as f:
+        with open("config/config.json", "r+") as f:
             config = json.load(f)
             f.close()
             return config
@@ -111,7 +111,7 @@ def get_config_data():
 def set_config_data(data):
 
     try:
-        with open("config.json", "w") as f:
+        with open("config/config.json", "w") as f:
             f.write(data)
             f.close()
             return 1
@@ -143,12 +143,12 @@ def restart_app():
 def get_network_data():
 
     try:
-        with open("network/network.json", "r+") as f:
+        with open("config/device.json", "r+") as f:
             config = json.load(f)
             f.close()
             return config
     except Exception as e:
-        logging("error while reading network.json - {}".format(e))
+        logging("error while reading device.json - {}".format(e))
         f.close()
         return 0
 
@@ -156,7 +156,7 @@ def get_network_data():
 def set_network_data(data):
 
     try:
-        with open("network/network.json", "w") as f:
+        with open("config/device.json", "w") as f:
             f.write(data)
             f.close()
             return 1
@@ -170,7 +170,7 @@ def restart_network():
         return 0
 
     try:
-        with open("network/dhcpcd-dynamic.txt", "w") as f:
+        with open("config/dhcpcd-dynamic.txt", "w") as f:
             string = "static ip_address="+config["device_ip"] + '\n'
             string += "static routers="+config["default_gateway"] + '\n'
             string += "static domain_name_servers="+config["dns_server"]+' '+config["dns_server2"]
