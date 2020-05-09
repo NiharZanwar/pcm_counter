@@ -23,7 +23,7 @@ def get_aotc(ip):
     }
 
     try:
-        response = requests.get(url)
+        response = requests.get(url,timeout=0.7)
         if response.status_code != 200:
             data["success"] = 0
             return data
@@ -45,6 +45,7 @@ def get_aotc(ip):
 def get_day_count(ip, interval, day):
     url = "http://{}/cgi-bin/GetCounts.cgi?getReports&{}&{}&{}&{}".format(ip, day["year"], day["month"], day["day"],
                                                                           interval)
+    # print(url)
     data = {
         "success": 0,
         "in": 0,
@@ -56,13 +57,14 @@ def get_day_count(ip, interval, day):
     try:
         response = requests.get(url)
         xml_root = ET.fromstring(response.text)
-
+        # print(response.text)
         for child in xml_root[0]:
             data["in"] += int(child.attrib["In"])
             data["out"] += int(child.attrib["Out"])
 
         data["occupancy"] = data["in"] - data["out"]
         data["success"] = 1
+        # print(data)
         return data
     except Exception as e:
         logging("error in get day count - {}".format(e))

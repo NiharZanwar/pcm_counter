@@ -134,6 +134,11 @@ def hello():
     return render_template('display.html')
 
 
+@app.route('/', methods=['GET'])
+def root():
+    return render_template('index.html')
+
+
 @app.route('/settings', methods=['GET'])
 def settings():
     return render_template('settings.html')
@@ -263,6 +268,7 @@ def config_values():
 
         return json.dumps(response)
 
+
 @app.route('/upload_images', methods=['GET', 'POST'])
 def upload_images():
     if request.method == 'GET':
@@ -373,9 +379,5 @@ if __name__ == '__main__':
     start_new_thread(maintain_device_list, ())
 
     app.run(host='0.0.0.0', port=5000, debug=True)
-
-# todo refine css and html
-# todo create themes
-# todo add provision to add advertisement picture
 
 
