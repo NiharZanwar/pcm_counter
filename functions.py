@@ -2,6 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 import json
 from datetime import datetime
+from os import system
 
 
 def logging(string):
@@ -166,6 +167,7 @@ def set_network_data(data):
         logging("error while writing to config file - {}".format(e))
         return 0
 
+
 def restart_network():
     config = get_network_data()
     if config == 0:
@@ -178,6 +180,11 @@ def restart_network():
             string += "static domain_name_servers="+config["dns_server"]+' '+config["dns_server2"]
             f.write(string)
             f.close()
+            try:
+                system("sudo ./change_network.sh")
+            except Exception as e:
+                logging("could not execute change_network.sh - {}".format(e))
+
             return 1
     except Exception as e:
         logging("error while writing to dhcpcd-dynamic.txt - {}".format(e))

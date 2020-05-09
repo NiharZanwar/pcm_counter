@@ -352,11 +352,11 @@ def network_values():
         config["dns_server2"] = json_data["dns_server2"]
 
         set_network_data(json.dumps(config))
-        restart_network()
+        if restart_network() == 0:
+            response["success"] = 0
+            response["message"] = "Error while restarting network"
 
         return json.dumps(response)
-
-
 
 
 if __name__ == '__main__':
