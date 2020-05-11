@@ -2104,3 +2104,1557 @@ Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded 
 2020/05/09 15:39:39
 Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f64052712b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
 
+2020/05/09 23:08:58
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:08:58
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968714460>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:12:19
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:12:19
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:22:00
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fac7310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:22:07
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:22:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:22:13
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968708520>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:22:31
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968714f10>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:22:38
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687148b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:22:40
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fac6310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:22:46
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/09 23:22:51
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fb029a0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:05
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687145e0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:36
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968714df0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:36
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fab3280>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:44
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f5610b7e760>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:56
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fa99280>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:23:57
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968714a30>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:24:05
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fb02b80>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:24:07
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687140d0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:24:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968714820>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:24:51
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687145e0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:33:33
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fac1280>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:33:33
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687147f0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:33:37
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fac1a30>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:33:37
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968708c10>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:34:47
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f560fb02880>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:34:49
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa968ffc880>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:34:54
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fa9687080d0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/09 23:35:04
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/10 01:09:47
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/10 23:14:57
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/10 23:14:57
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/10 23:31:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/10 23:31:12
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f500c529730>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/10 23:31:13
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe7880f1340>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/10 23:31:19
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f500c4f5370>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/10 23:31:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe788104e50>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/10 23:32:51
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f500d5ac760>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 00:00:27
+error in get day count - child index out of range
+
+2020/05/11 00:00:27
+error in get day count - child index out of range
+
+2020/05/11 00:00:29
+error in get day count - child index out of range
+
+2020/05/11 00:00:29
+error in get day count - child index out of range
+
+2020/05/11 00:00:31
+error in get day count - child index out of range
+
+2020/05/11 00:00:31
+error in get day count - child index out of range
+
+2020/05/11 00:00:33
+error in get day count - child index out of range
+
+2020/05/11 00:00:33
+error in get day count - child index out of range
+
+2020/05/11 00:00:35
+error in get day count - child index out of range
+
+2020/05/11 00:00:35
+error in get day count - child index out of range
+
+2020/05/11 00:00:37
+error in get day count - child index out of range
+
+2020/05/11 00:00:37
+error in get day count - child index out of range
+
+2020/05/11 00:00:40
+error in get day count - child index out of range
+
+2020/05/11 00:00:40
+error in get day count - child index out of range
+
+2020/05/11 00:00:42
+error in get day count - child index out of range
+
+2020/05/11 00:00:42
+error in get day count - child index out of range
+
+2020/05/11 00:00:44
+error in get day count - child index out of range
+
+2020/05/11 00:00:44
+error in get day count - child index out of range
+
+2020/05/11 00:00:46
+error in get day count - child index out of range
+
+2020/05/11 00:00:46
+error in get day count - child index out of range
+
+2020/05/11 00:00:48
+error in get day count - child index out of range
+
+2020/05/11 00:00:48
+error in get day count - child index out of range
+
+2020/05/11 00:00:50
+error in get day count - child index out of range
+
+2020/05/11 00:00:50
+error in get day count - child index out of range
+
+2020/05/11 00:00:52
+error in get day count - child index out of range
+
+2020/05/11 00:00:52
+error in get day count - child index out of range
+
+2020/05/11 00:00:54
+error in get day count - child index out of range
+
+2020/05/11 00:00:54
+error in get day count - child index out of range
+
+2020/05/11 00:00:56
+error in get day count - child index out of range
+
+2020/05/11 00:00:56
+error in get day count - child index out of range
+
+2020/05/11 00:00:58
+error in get day count - child index out of range
+
+2020/05/11 00:00:58
+error in get day count - child index out of range
+
+2020/05/11 00:01:00
+error in get day count - child index out of range
+
+2020/05/11 00:01:00
+error in get day count - child index out of range
+
+2020/05/11 00:01:02
+error in get day count - child index out of range
+
+2020/05/11 00:01:02
+error in get day count - child index out of range
+
+2020/05/11 00:01:04
+error in get day count - child index out of range
+
+2020/05/11 00:01:04
+error in get day count - child index out of range
+
+2020/05/11 00:01:06
+error in get day count - child index out of range
+
+2020/05/11 00:01:06
+error in get day count - child index out of range
+
+2020/05/11 00:01:09
+error in get day count - child index out of range
+
+2020/05/11 00:01:09
+error in get day count - child index out of range
+
+2020/05/11 00:01:11
+error in get day count - child index out of range
+
+2020/05/11 00:01:11
+error in get day count - child index out of range
+
+2020/05/11 00:01:13
+error in get day count - child index out of range
+
+2020/05/11 00:01:13
+error in get day count - child index out of range
+
+2020/05/11 00:01:15
+error in get day count - child index out of range
+
+2020/05/11 00:01:15
+error in get day count - child index out of range
+
+2020/05/11 00:01:17
+error in get day count - child index out of range
+
+2020/05/11 00:01:17
+error in get day count - child index out of range
+
+2020/05/11 00:01:19
+error in get day count - child index out of range
+
+2020/05/11 00:01:19
+error in get day count - child index out of range
+
+2020/05/11 00:01:21
+error in get day count - child index out of range
+
+2020/05/11 00:01:21
+error in get day count - child index out of range
+
+2020/05/11 00:01:23
+error in get day count - child index out of range
+
+2020/05/11 00:01:23
+error in get day count - child index out of range
+
+2020/05/11 00:01:25
+error in get day count - child index out of range
+
+2020/05/11 00:01:25
+error in get day count - child index out of range
+
+2020/05/11 00:01:27
+error in get day count - child index out of range
+
+2020/05/11 00:01:27
+error in get day count - child index out of range
+
+2020/05/11 00:01:29
+error in get day count - child index out of range
+
+2020/05/11 00:01:29
+error in get day count - child index out of range
+
+2020/05/11 00:01:31
+error in get day count - child index out of range
+
+2020/05/11 00:01:31
+error in get day count - child index out of range
+
+2020/05/11 00:01:33
+error in get day count - child index out of range
+
+2020/05/11 00:01:33
+error in get day count - child index out of range
+
+2020/05/11 00:01:35
+error in get day count - child index out of range
+
+2020/05/11 00:01:35
+error in get day count - child index out of range
+
+2020/05/11 00:01:38
+error in get day count - child index out of range
+
+2020/05/11 00:01:38
+error in get day count - child index out of range
+
+2020/05/11 00:01:40
+error in get day count - child index out of range
+
+2020/05/11 00:01:40
+error in get day count - child index out of range
+
+2020/05/11 00:01:42
+error in get day count - child index out of range
+
+2020/05/11 00:01:42
+error in get day count - child index out of range
+
+2020/05/11 00:01:44
+error in get day count - child index out of range
+
+2020/05/11 00:01:44
+error in get day count - child index out of range
+
+2020/05/11 00:01:46
+error in get day count - child index out of range
+
+2020/05/11 00:01:46
+error in get day count - child index out of range
+
+2020/05/11 00:01:48
+error in get day count - child index out of range
+
+2020/05/11 00:01:48
+error in get day count - child index out of range
+
+2020/05/11 00:01:50
+error in get day count - child index out of range
+
+2020/05/11 00:01:50
+error in get day count - child index out of range
+
+2020/05/11 00:01:52
+error in get day count - child index out of range
+
+2020/05/11 00:01:52
+error in get day count - child index out of range
+
+2020/05/11 00:01:54
+error in get day count - child index out of range
+
+2020/05/11 00:01:54
+error in get day count - child index out of range
+
+2020/05/11 00:01:56
+error in get day count - child index out of range
+
+2020/05/11 00:01:56
+error in get day count - child index out of range
+
+2020/05/11 00:01:58
+error in get day count - child index out of range
+
+2020/05/11 00:01:58
+error in get day count - child index out of range
+
+2020/05/11 00:02:00
+error in get day count - child index out of range
+
+2020/05/11 00:02:00
+error in get day count - child index out of range
+
+2020/05/11 00:02:02
+error in get day count - child index out of range
+
+2020/05/11 00:02:02
+error in get day count - child index out of range
+
+2020/05/11 00:02:04
+error in get day count - child index out of range
+
+2020/05/11 00:02:04
+error in get day count - child index out of range
+
+2020/05/11 00:02:06
+error in get day count - child index out of range
+
+2020/05/11 00:02:06
+error in get day count - child index out of range
+
+2020/05/11 00:02:09
+error in get day count - child index out of range
+
+2020/05/11 00:02:09
+error in get day count - child index out of range
+
+2020/05/11 00:02:11
+error in get day count - child index out of range
+
+2020/05/11 00:02:11
+error in get day count - child index out of range
+
+2020/05/11 00:02:13
+error in get day count - child index out of range
+
+2020/05/11 00:02:13
+error in get day count - child index out of range
+
+2020/05/11 00:02:15
+error in get day count - child index out of range
+
+2020/05/11 00:02:15
+error in get day count - child index out of range
+
+2020/05/11 00:02:17
+error in get day count - child index out of range
+
+2020/05/11 00:02:17
+error in get day count - child index out of range
+
+2020/05/11 00:02:19
+error in get day count - child index out of range
+
+2020/05/11 00:02:19
+error in get day count - child index out of range
+
+2020/05/11 00:02:21
+error in get day count - child index out of range
+
+2020/05/11 00:02:21
+error in get day count - child index out of range
+
+2020/05/11 00:02:23
+error in get day count - child index out of range
+
+2020/05/11 00:02:23
+error in get day count - child index out of range
+
+2020/05/11 00:02:25
+error in get day count - child index out of range
+
+2020/05/11 00:02:25
+error in get day count - child index out of range
+
+2020/05/11 00:02:27
+error in get day count - child index out of range
+
+2020/05/11 00:02:27
+error in get day count - child index out of range
+
+2020/05/11 00:02:29
+error in get day count - child index out of range
+
+2020/05/11 00:02:29
+error in get day count - child index out of range
+
+2020/05/11 00:02:31
+error in get day count - child index out of range
+
+2020/05/11 00:02:31
+error in get day count - child index out of range
+
+2020/05/11 00:02:33
+error in get day count - child index out of range
+
+2020/05/11 00:02:33
+error in get day count - child index out of range
+
+2020/05/11 00:02:35
+error in get day count - child index out of range
+
+2020/05/11 00:02:35
+error in get day count - child index out of range
+
+2020/05/11 00:02:37
+error in get day count - child index out of range
+
+2020/05/11 00:02:37
+error in get day count - child index out of range
+
+2020/05/11 00:02:39
+error in get day count - child index out of range
+
+2020/05/11 00:02:39
+error in get day count - child index out of range
+
+2020/05/11 00:02:41
+error in get day count - child index out of range
+
+2020/05/11 00:02:41
+error in get day count - child index out of range
+
+2020/05/11 00:02:43
+error in get day count - child index out of range
+
+2020/05/11 00:02:44
+error in get day count - child index out of range
+
+2020/05/11 00:02:46
+error in get day count - child index out of range
+
+2020/05/11 00:02:46
+error in get day count - child index out of range
+
+2020/05/11 00:02:48
+error in get day count - child index out of range
+
+2020/05/11 00:02:48
+error in get day count - child index out of range
+
+2020/05/11 00:02:50
+error in get day count - child index out of range
+
+2020/05/11 00:02:50
+error in get day count - child index out of range
+
+2020/05/11 00:02:52
+error in get day count - child index out of range
+
+2020/05/11 00:02:52
+error in get day count - child index out of range
+
+2020/05/11 00:02:54
+error in get day count - child index out of range
+
+2020/05/11 00:02:54
+error in get day count - child index out of range
+
+2020/05/11 00:02:56
+error in get day count - child index out of range
+
+2020/05/11 00:02:56
+error in get day count - child index out of range
+
+2020/05/11 00:02:58
+error in get day count - child index out of range
+
+2020/05/11 00:02:58
+error in get day count - child index out of range
+
+2020/05/11 00:03:00
+error in get day count - child index out of range
+
+2020/05/11 00:03:00
+error in get day count - child index out of range
+
+2020/05/11 00:03:02
+error in get day count - child index out of range
+
+2020/05/11 00:03:02
+error in get day count - child index out of range
+
+2020/05/11 00:03:04
+error in get day count - child index out of range
+
+2020/05/11 00:03:04
+error in get day count - child index out of range
+
+2020/05/11 00:03:06
+error in get day count - child index out of range
+
+2020/05/11 00:03:06
+error in get day count - child index out of range
+
+2020/05/11 00:03:08
+error in get day count - child index out of range
+
+2020/05/11 00:03:08
+error in get day count - child index out of range
+
+2020/05/11 00:03:10
+error in get day count - child index out of range
+
+2020/05/11 00:03:10
+error in get day count - child index out of range
+
+2020/05/11 00:03:12
+error in get day count - child index out of range
+
+2020/05/11 00:03:13
+error in get day count - child index out of range
+
+2020/05/11 00:03:14
+error in get day count - child index out of range
+
+2020/05/11 00:03:15
+error in get day count - child index out of range
+
+2020/05/11 00:03:17
+error in get day count - child index out of range
+
+2020/05/11 00:03:17
+error in get day count - child index out of range
+
+2020/05/11 00:03:19
+error in get day count - child index out of range
+
+2020/05/11 00:03:19
+error in get day count - child index out of range
+
+2020/05/11 00:03:21
+error in get day count - child index out of range
+
+2020/05/11 00:03:21
+error in get day count - child index out of range
+
+2020/05/11 00:03:23
+error in get day count - child index out of range
+
+2020/05/11 00:03:23
+error in get day count - child index out of range
+
+2020/05/11 00:03:25
+error in get day count - child index out of range
+
+2020/05/11 00:03:25
+error in get day count - child index out of range
+
+2020/05/11 00:03:27
+error in get day count - child index out of range
+
+2020/05/11 00:03:27
+error in get day count - child index out of range
+
+2020/05/11 00:03:29
+error in get day count - child index out of range
+
+2020/05/11 00:03:29
+error in get day count - child index out of range
+
+2020/05/11 00:03:31
+error in get day count - child index out of range
+
+2020/05/11 00:03:31
+error in get day count - child index out of range
+
+2020/05/11 00:03:33
+error in get day count - child index out of range
+
+2020/05/11 00:03:33
+error in get day count - child index out of range
+
+2020/05/11 00:03:35
+error in get day count - child index out of range
+
+2020/05/11 00:03:35
+error in get day count - child index out of range
+
+2020/05/11 00:03:37
+error in get day count - child index out of range
+
+2020/05/11 00:03:37
+error in get day count - child index out of range
+
+2020/05/11 00:03:39
+error in get day count - child index out of range
+
+2020/05/11 00:03:39
+error in get day count - child index out of range
+
+2020/05/11 00:03:41
+error in get day count - child index out of range
+
+2020/05/11 00:03:42
+error in get day count - child index out of range
+
+2020/05/11 00:03:43
+error in get day count - child index out of range
+
+2020/05/11 00:03:44
+error in get day count - child index out of range
+
+2020/05/11 00:03:45
+error in get day count - child index out of range
+
+2020/05/11 00:03:46
+error in get day count - child index out of range
+
+2020/05/11 00:03:47
+error in get day count - child index out of range
+
+2020/05/11 00:03:48
+error in get day count - child index out of range
+
+2020/05/11 00:03:49
+error in get day count - child index out of range
+
+2020/05/11 00:03:50
+error in get day count - child index out of range
+
+2020/05/11 00:03:51
+error in get day count - child index out of range
+
+2020/05/11 00:03:52
+error in get day count - child index out of range
+
+2020/05/11 00:03:54
+error in get day count - child index out of range
+
+2020/05/11 00:03:54
+error in get day count - child index out of range
+
+2020/05/11 00:03:56
+error in get day count - child index out of range
+
+2020/05/11 00:03:56
+error in get day count - child index out of range
+
+2020/05/11 00:03:58
+error in get day count - child index out of range
+
+2020/05/11 00:03:58
+error in get day count - child index out of range
+
+2020/05/11 00:04:00
+error in get day count - child index out of range
+
+2020/05/11 00:04:00
+error in get day count - child index out of range
+
+2020/05/11 00:04:02
+error in get day count - child index out of range
+
+2020/05/11 00:04:02
+error in get day count - child index out of range
+
+2020/05/11 00:04:04
+error in get day count - child index out of range
+
+2020/05/11 00:04:04
+error in get day count - child index out of range
+
+2020/05/11 00:04:06
+error in get day count - child index out of range
+
+2020/05/11 00:04:06
+error in get day count - child index out of range
+
+2020/05/11 00:04:08
+error in get day count - child index out of range
+
+2020/05/11 00:04:08
+error in get day count - child index out of range
+
+2020/05/11 00:04:10
+error in get day count - child index out of range
+
+2020/05/11 00:04:10
+error in get day count - child index out of range
+
+2020/05/11 00:04:12
+error in get day count - child index out of range
+
+2020/05/11 00:04:12
+error in get day count - child index out of range
+
+2020/05/11 00:04:14
+error in get day count - child index out of range
+
+2020/05/11 00:04:14
+error in get day count - child index out of range
+
+2020/05/11 00:04:16
+error in get day count - child index out of range
+
+2020/05/11 00:04:17
+error in get day count - child index out of range
+
+2020/05/11 00:04:18
+error in get day count - child index out of range
+
+2020/05/11 00:04:19
+error in get day count - child index out of range
+
+2020/05/11 00:04:20
+error in get day count - child index out of range
+
+2020/05/11 00:04:21
+error in get day count - child index out of range
+
+2020/05/11 00:04:22
+error in get day count - child index out of range
+
+2020/05/11 00:04:23
+error in get day count - child index out of range
+
+2020/05/11 00:04:24
+error in get day count - child index out of range
+
+2020/05/11 00:04:25
+error in get day count - child index out of range
+
+2020/05/11 00:04:26
+error in get day count - child index out of range
+
+2020/05/11 00:04:27
+error in get day count - child index out of range
+
+2020/05/11 00:04:29
+error in get day count - child index out of range
+
+2020/05/11 00:04:29
+error in get day count - child index out of range
+
+2020/05/11 00:04:31
+error in get day count - child index out of range
+
+2020/05/11 00:04:31
+error in get day count - child index out of range
+
+2020/05/11 00:04:33
+error in get day count - child index out of range
+
+2020/05/11 00:04:33
+error in get day count - child index out of range
+
+2020/05/11 00:04:35
+error in get day count - child index out of range
+
+2020/05/11 00:04:35
+error in get day count - child index out of range
+
+2020/05/11 00:04:37
+error in get day count - child index out of range
+
+2020/05/11 00:04:37
+error in get day count - child index out of range
+
+2020/05/11 00:04:39
+error in get day count - child index out of range
+
+2020/05/11 00:04:39
+error in get day count - child index out of range
+
+2020/05/11 00:04:41
+error in get day count - child index out of range
+
+2020/05/11 00:04:41
+error in get day count - child index out of range
+
+2020/05/11 00:04:43
+error in get day count - child index out of range
+
+2020/05/11 00:04:43
+error in get day count - child index out of range
+
+2020/05/11 00:04:45
+error in get day count - child index out of range
+
+2020/05/11 00:04:45
+error in get day count - child index out of range
+
+2020/05/11 00:04:47
+error in get day count - child index out of range
+
+2020/05/11 00:04:47
+error in get day count - child index out of range
+
+2020/05/11 00:04:49
+error in get day count - child index out of range
+
+2020/05/11 00:04:50
+error in get day count - child index out of range
+
+2020/05/11 00:04:51
+error in get day count - child index out of range
+
+2020/05/11 00:04:52
+error in get day count - child index out of range
+
+2020/05/11 00:04:53
+error in get day count - child index out of range
+
+2020/05/11 00:04:54
+error in get day count - child index out of range
+
+2020/05/11 00:04:55
+error in get day count - child index out of range
+
+2020/05/11 00:04:56
+error in get day count - child index out of range
+
+2020/05/11 00:04:57
+error in get day count - child index out of range
+
+2020/05/11 00:04:58
+error in get day count - child index out of range
+
+2020/05/11 00:04:59
+error in get day count - child index out of range
+
+2020/05/11 00:05:00
+error in get day count - child index out of range
+
+2020/05/11 00:05:01
+error in get day count - child index out of range
+
+2020/05/11 00:05:02
+error in get day count - child index out of range
+
+2020/05/11 00:05:04
+error in get day count - child index out of range
+
+2020/05/11 00:05:04
+error in get day count - child index out of range
+
+2020/05/11 00:05:06
+error in get day count - child index out of range
+
+2020/05/11 00:05:06
+error in get day count - child index out of range
+
+2020/05/11 00:05:08
+error in get day count - child index out of range
+
+2020/05/11 00:05:08
+error in get day count - child index out of range
+
+2020/05/11 00:05:10
+error in get day count - child index out of range
+
+2020/05/11 00:05:10
+error in get day count - child index out of range
+
+2020/05/11 00:05:12
+error in get day count - child index out of range
+
+2020/05/11 00:05:12
+error in get day count - child index out of range
+
+2020/05/11 00:05:14
+error in get day count - child index out of range
+
+2020/05/11 00:05:14
+error in get day count - child index out of range
+
+2020/05/11 00:05:16
+error in get day count - child index out of range
+
+2020/05/11 00:05:16
+error in get day count - child index out of range
+
+2020/05/11 00:05:18
+error in get day count - child index out of range
+
+2020/05/11 00:05:18
+error in get day count - child index out of range
+
+2020/05/11 00:05:20
+error in get day count - child index out of range
+
+2020/05/11 00:05:20
+error in get day count - child index out of range
+
+2020/05/11 00:05:22
+error in get day count - child index out of range
+
+2020/05/11 00:05:23
+error in get day count - child index out of range
+
+2020/05/11 00:05:24
+error in get day count - child index out of range
+
+2020/05/11 00:05:25
+error in get day count - child index out of range
+
+2020/05/11 00:05:26
+error in get day count - child index out of range
+
+2020/05/11 00:13:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3008b20>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 00:23:56
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc71c0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 00:23:56
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b75c70>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 01:35:01
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b75580>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:54:52
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b75580>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:54:52
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc7640>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:54:57
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b69ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:54:57
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc0310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:02
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b69f40>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:02
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc0ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:06
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b68bb0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:06
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc0a30>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:11
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b68fd0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:11
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3008be0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:16
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b481f0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:16
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3027ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b48220>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:20
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fb5310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:25
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b684f0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:25
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fb5ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b68af0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:30
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fae2b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:35
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b69340>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:35
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2faea60>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:39
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b755b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:39
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3027b80>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:44
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b751c0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:44
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3008a60>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:49
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19305190>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:49
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fae430>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:53
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b75880>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:53
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc7310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:58
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b753a0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:55:58
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fc7ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:03
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b69f40>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:03
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fb02b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:07
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b69ee0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:08
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fb0a60>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:12
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b68ca0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:12
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fb00d0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:17
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e1ac36130>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:17
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d3008f10>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b48370>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:22
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fe92b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e193058b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:26
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fd7310>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:31
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b687c0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:31
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fd7ac0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:36
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9e19b68f70>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:36
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f21d2fac2b0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:49
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f6a9d7503d0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 10:56:49
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fb3945d4b20>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 11:17:41
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fd26d59c640>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 11:17:42
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc188f2c6d0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 12:04:29
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fe1b3b32640>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 12:04:29
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f9baddc9b80>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 12:56:04
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fef1ea60640>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 12:56:04
+Error - HTTPConnectionPool(host='192.168.1.100', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f357cec46a0>, 'Connection to 192.168.1.100 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:12:55
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2b5cb2ad00>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 14:12:55
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f2b5cb50f70>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 14:14:51
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7af0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:14:53
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f430>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:14:54
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05cad30>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:14:56
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066fc10>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:14:58
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f25d05ca2e0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 14:15:00
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1e90612400>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 14:15:00
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f25d05b7220>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 14:18:07
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f3a0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:22:26
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05caf40>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:22:26
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f20d0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:22:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9060f5b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:22:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d26b2700>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:22:55
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9060f850>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:24:09
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066fb50>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:28:09
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061d370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:29:08
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061d250>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:29:21
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d26b2dc0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:29:43
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90639310>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:29:46
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90639ac0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:30:37
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054ba00>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:30:37
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2190>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:35:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061d370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:35:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7df0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:44:11
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca2b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:44:19
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061dca0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:51:18
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9063e310>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 14:51:18
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162feb0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:05:59
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f5e0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:06:01
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d26b28b0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:07:27
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca910>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:22:53
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d056f370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:22:53
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062a370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:23:17
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062a6a0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 15:23:17
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05cab50>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:34:51
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055adf0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:34:51
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90612310>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:34:53
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f25d054be50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 16:34:53
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f1e90612ac0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+
+2020/05/11 16:35:16
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d16095b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:35:16
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2a30>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:38:25
+error in get day count - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getReports&2020&05&11&5 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f25d05ca370>: Failed to establish a new connection: [Errno 113] No route to host'))
+
+2020/05/11 16:38:27
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062e370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:38:28
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7850>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:45:32
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062e5b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:45:32
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05cae20>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:32
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055a580>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:32
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f7c0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:46
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05cad90>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:46
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90638370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:49
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90638b20>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:49
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b2b0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:54
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b550>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:46:59
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162fd30>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:01
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7af0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:06
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f24c0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:17
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062c370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:19
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062cb20>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:25
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f430>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:25
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055a250>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:30
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062e370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:34
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062eb20>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:37
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90612310>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:39
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b4c0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:47:55
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca580>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:02
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055ad30>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:06
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2be0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:07
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d1666790>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:13
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b790>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:15
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/11 16:48:15
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/11 16:48:23
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d26b2d00>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:46
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b7c0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:56
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062fcd0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:48:57
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054be20>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:01
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066feb0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:02
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054bb80>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:12
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062a370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:17
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062ab20>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:18
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca400>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:22
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2820>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:25
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90612370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:32
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca850>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:37
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054bd30>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:37
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e906128e0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:42
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90637310>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:42
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:45
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90637ac0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:49
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061d2b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:49:52
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05ca340>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:03
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/11 16:50:08
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055ad30>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:10
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162fac0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:27
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Read timed out. (read timeout=0.7)
+
+2020/05/11 16:50:28
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f910>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:29
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b550>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:31
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061d370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:35
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b580>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:41
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9061da60>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:47
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f21c0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:50:55
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062c370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:51:01
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162feb0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:51:03
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9062c730>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:51:16
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066ffd0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:52:28
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90639370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:54:06
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162fcd0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 16:57:00
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90639d60>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:01:45
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055a580>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:03
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d055a8b0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:06
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2df0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:43
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90616370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054be20>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:49
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90616400>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:58
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e9066f9a0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:02:58
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d05b7820>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:06:44
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162fdf0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:06:44
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90612370>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:07:17
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b700>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:07:27
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e906129a0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:12:12
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d162fdf0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:16:36
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f25d054b250>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:16:36
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e916f2670>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:18:46
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e90639370>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/11 17:29:47
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f1e906391f0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/12 00:40:12
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f08e3009ca0>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/12 00:40:13
+Error - HTTPConnectionPool(host='192.168.1.228', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7b31834d00>, 'Connection to 192.168.1.228 timed out. (connect timeout=0.7)'))
+
+2020/05/12 00:40:13
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f08e2feca90>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+
+2020/05/12 00:40:13
+Error - HTTPConnectionPool(host='192.168.1.188', port=80): Max retries exceeded with url: /cgi-bin/GetCounts.cgi?getCounts (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f7b31812eb0>, 'Connection to 192.168.1.188 timed out. (connect timeout=0.7)'))
+

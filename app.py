@@ -359,6 +359,11 @@ def network_values():
         return json.dumps(response)
 
 
+@app.route('/testing')
+def testing():
+    return render_template('testing.html')
+
+
 if __name__ == '__main__':
 
     global device_list

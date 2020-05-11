@@ -12,13 +12,14 @@
 }
 
 .advertisement {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px 1px;
-    grid-template-areas: ". . .";
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-rows: 1fr;*/
+    /*gap: 1px 1px;*/
+    /*grid-template-areas: ". . .";*/
     grid-area: advertisement;
     background-color: lightyellow;
+    text-align: center;
 }
 
 .border {
@@ -329,14 +330,15 @@ body {
 
 }
 
-/*#advertisement-id{*/
-/*    justify-content: center;*/
-/*    display:flex;*/
-/*    margin-top: 40px;*/
-/*    margin-left: 90px;*/
-/*    height: 380px;*/
-/*    width: 1500px;*/
-/*}*/
+#advertisement-id{
+    /*justify-content: center;*/
+    /*display:flex;*/
+    /*margin-top: 40px;*/
+    /*margin-left: 90px;*/
+    /*height: 380px;*/
+    /*width: 1500px;*/
+    text-align: center;
+}
 
 #banner-id{
     justify-content: center;
