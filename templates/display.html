@@ -5,68 +5,66 @@
     <title>display</title>
 </head>
 
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/testing.css') }}">
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/display.css') }}">
-
-<body>
 <div class="grid-container">
     <div class="banner">
         <marquee id="banner-id"><b>STAY SAFE. WEAR MASK. WASH HANDS. USE SANITIZER</b></marquee>
     </div>
-    <div class="advertisement" style="text-align: center">
-        <div id="advertisement-id">
-            <img src="get_icon/ad.jpg">
-        </div>
+    <div class="advertisement">
+        <img id="advertisement-id" src="get_icon/ad.jpg">
     </div>
     <div class="border"></div>
-    <div class="status">
-        <div class="status-message">
-            <div class="status-message-text">
-                <div id="status-message-text-id"></div>
-            </div>
-            <div class="status-message-icon">
+    <div class="data">
+        <div class="status">
+            <div class="status-picture">
                 <div id="status-message-icon-id"></div>
             </div>
-        </div>
-    </div>
-    <div class="occupancy">
-        <div class="occupancy-data">
-            <div class="occupancy-max-text"><b>MAX OCCUPENCY</b></div>
-            <div class="occupancy-max-count">
-                <div id="occupency-max-count-id"></div>
-            </div>
-            <div class="occupancy-current-text"><b>CURRENT OCCUPENCY</b></div>
-            <div class="occupency-current-count">
-                <div id="occupency-current-count-id"></div>
+            <div class="status-message">
+                <div id="status-message-text-id"></div>
             </div>
         </div>
-    </div>
-    <div class="in-out">
-        <div class="logo">
-            <div class="time">
-                <div id="reload-image-id" style="background-color: lightyellow">
-                    <img src="get_icon/reload.png" onclick="reload_screen()">
+        <div class="occupancy">
+            <div class="current-count">
+                <div id="current-count-id"></div>
+            </div>
+            <div class="current-text">CURRENT OCCUPANCY</div>
+            <div class="maximum-occupancy">
+                <div class="maximum-text">MAX OCCUPANCY</div>
+                <div class="maximum-count">
+                    <div id="max-count-id"></div>
                 </div>
-
-{#                <a href="/"><img src="get_icon/reload.png"></a>#}
-
-            </div>
-            <div class="logo-image" style="text-align: center">
-                <div id="logo-image-id" style="background-color: lightyellow"><img src="get_icon/logo.png"></div>
-
             </div>
         </div>
-        <div class="in-out-data">
-            <div class="in-count">
-                <div id="in-count-id" style="color: #21211d"></div>
+        <div class="misc">
+            <div class="in-out">
+                <div class="in-text">IN</div>
+                <div class="out-text">OUT</div>
+                <div class="in-count">
+                    <div id="in-count-id"></div>
+                </div>
+                <div class="out-count">
+                    <div id="out-count-id"></div>
+                </div>
             </div>
-            <div class="in-text">IN</div>
-            <div class="out-count">
-                <div id="out-count-id" style="color: #21211d"></div>
+            <div class="logo-time">
+                <div class="logo">
+                    <img id="logo-id" src="get_icon/logo.png">
+                </div>
+                <div class="time"></div>
             </div>
-            <div class="out-text">OUT</div>
             <div class="add-data">
-                <div id="add-data-id"></div>
+                <div class="home">
+                    <a href="/">
+                        <img id="home-id" src="get_icon/settings.png">
+                    </a>
+                </div>
+                <div class="reload" onclick="reload_screen()">
+                    <img id="reload-id" src="get_icon/reload.png">
+                </div>
+                <div class="add-data-text">
+                    <div id="add-data-id"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -82,17 +80,20 @@
     <source src="/get_icon/GO.mp3" type="audio/mpeg">
 </audio>
 
+</body>
+
 <script>
+
 
     timer = setInterval(update_screen, 2000);
 
     function change_add_data(live_status) {
-        var device_status = "Active Devices : " + live_status["active_number"] + ' / ' + live_status["total_devices"];
-        document.getElementById("add-data-id").innerText = device_status;
+        var device_status = "Active Devices : <br>" + live_status["active_number"] + ' / ' + live_status["total_devices"];
+        document.getElementById("add-data-id").innerHTML = device_status;
     }
 
     function change_occupancy_color(color, value) {
-        document.getElementById("occupency-current-count-id").innerHTML = "<style>#occupency-current-count-id{" +
+        document.getElementById("current-count-id").innerHTML = "<style>#current-count-id{" +
             "background-color: " + color + "}</style>" + value;
     }
 
@@ -102,7 +103,7 @@
     }
 
     function change_occupancy_max_count(value) {
-        document.getElementById("occupency-max-count-id").innerHTML = value;
+        document.getElementById("max-count-id").innerHTML = value;
     }
 
     function change_in_out_color(value_in, value_out) {
@@ -166,5 +167,4 @@
         location.reload();
     }
 </script>
-</body>
 </html>
