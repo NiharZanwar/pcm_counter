@@ -8,37 +8,163 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/testing.css') }}">
 
 <div class="grid-container">
-    <div class="banner"></div>
-    <div class="advertisement"></div>
+    <div class="banner">
+        <marquee id="banner-id"><b>STAY SAFE. WEAR MASK. WASH HANDS. USE SANITIZER</b></marquee>
+    </div>
+    <div class="advertisement">
+        <img id="advertisement-id" src="get_icon/ad.jpg">
+    </div>
     <div class="border"></div>
     <div class="data">
         <div class="status">
-            <div class="status-picture"></div>
-            <div class="status-message"></div>
+            <div class="status-picture">
+                <div id="status-message-icon-id"></div>
+            </div>
+            <div class="status-message">
+                <div id="status-message-text-id"></div>
+            </div>
         </div>
         <div class="occupancy">
-            <div class="current-count"></div>
-            <div class="current-text"></div>
+            <div class="current-count">
+                <div id="current-count-id"></div>
+            </div>
+            <div class="current-text">CURRENT OCCUPANCY</div>
             <div class="maximum-occupancy">
-                <div class="maximum-text"></div>
-                <div class="maximum-count"></div>
+                <div class="maximum-text">MAX OCCUPANCY</div>
+                <div class="maximum-count">
+                    <div id="max-count-id"></div>
+                </div>
             </div>
         </div>
         <div class="misc">
             <div class="in-out">
-                <div class="in-text"></div>
-                <div class="out-text"></div>
-                <div class="in-count"></div>
-                <div class="out-count"></div>
+                <div class="in-text">IN</div>
+                <div class="out-text">OUT</div>
+                <div class="in-count">
+                    <div id="in-count-id"></div>
+                </div>
+                <div class="out-count">
+                    <div id="out-count-id"></div>
+                </div>
             </div>
             <div class="logo-time">
-                <div class="logo"></div>
+                <div class="logo">
+                    <img id="logo-id" src="get_icon/logo.png">
+                </div>
                 <div class="time"></div>
             </div>
-            <div class="add-data"></div>
+            <div class="add-data">
+                <div class="home">
+                    <a href="/">
+                        <img id="home-id" src="get_icon/settings.png">
+                    </a>
+                </div>
+                <div class="reload" onclick="reload_screen()">
+                    <img id="reload-id" src="get_icon/reload.png">
+                </div>
+                <div class="add-data-text">
+                    <div id="add-data-id"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+
+<audio id="stop-audio">
+    <source src="/get_icon/STOP.mp3" type="audio/mpeg">
+    <!--    <source src="/get_icon/GO.mp3" type="audio/mpeg">-->
+</audio>
+<audio id="go-audio">
+    <!--    <source src="/get_icon/STOP.mp3" type="audio/mpeg">-->
+    <source src="/get_icon/GO.mp3" type="audio/mpeg">
+</audio>
+
 </body>
+
+<script>
+
+
+    timer = setInterval(update_screen, 2000);
+
+    function change_add_data(live_status) {
+        var device_status = "Active Devices : <br>" + live_status["active_number"] + ' / ' + live_status["total_devices"];
+        document.getElementById("add-data-id").innerHTML = device_status;
+    }
+
+    function change_occupancy_color(color, value) {
+        document.getElementById("current-count-id").innerHTML = "<style>#current-count-id{" +
+            "background-color: " + color + "}</style>" + value;
+    }
+
+    function change_status_color(color, value) {
+        document.getElementById("status-message-text-id").innerHTML = "<style>#status-message-text-id{" +
+            "background-color: " + color + "}</style>" + value;
+    }
+
+    function change_occupancy_max_count(value) {
+        document.getElementById("max-count-id").innerHTML = value;
+    }
+
+    function change_in_out_color(value_in, value_out) {
+        document.getElementById("in-count-id").innerHTML = value_in;
+        document.getElementById("out-count-id").innerHTML = value_out;
+    }
+
+    function change_status_icon(status, color) {
+        document.getElementById("status-message-icon-id").innerHTML = "<img src=\"/get_icon/" + status + ".png" + "\" >" +
+            "<style>#status-message-icon-id{" +
+            "background-color: " + "white" + "}</style>";
+    }
+
+    function play_audio(status, stop_enable, go_enable) {
+        var stop_audio = document.getElementById('stop-audio');
+        var go_audio = document.getElementById('go-audio');
+        if ((stop_audio.duration > 0 && !stop_audio.paused) || (go_audio.duration > 0 && !go_audio.paused)) {
+            return 0;
+            //Its playing...do your job
+
+        } else {
+            if (status == "STOP" && (stop_enable == 1)) {
+                stop_audio.play();
+                return 0;
+            }
+            if (status == "GO" && (go_enable == 1)) {
+                go_audio.play();
+                return 0;
+            } else {
+                return 0;
+            }
+            //Not playing...maybe paused, stopped or never played.
+
+        }
+    }
+
+
+    function update_screen() {
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                let response = JSON.parse(xhttp.responseText);
+                change_occupancy_color(response["occupancy_color"], response["occupancy"]);
+                change_status_color(response["occupancy_color"], response["status"]);
+                change_occupancy_max_count(response["maximum_occupancy"]);
+                change_in_out_color(response["in"], response["out"]);
+                change_status_icon(response["status"], response["occupancy_color"]);
+                change_add_data(response["live_status"]);
+                play_audio(response["status"], response["audio-stop"], response["audio-go"]);
+            }
+        };
+
+        xhttp.open("GET", "update_screen", true);
+        xhttp.send(null);
+    }
+
+
+    function reload_screen() {
+        location.reload();
+    }
+</script>
 </html>
