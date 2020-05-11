@@ -1,0 +1,136 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.8fr 0.1fr 1.6fr 0.3fr;
+    gap: 1px 1px;
+    grid-template-areas: "data" "border" "advertisement" "banner";
+}
+
+.banner {
+    grid-area: banner;
+}
+
+.advertisement {
+    grid-area: advertisement;
+}
+
+.border {
+    grid-area: border;
+    background-color: black;
+    display: flex;
+}
+
+.data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "status occupancy misc";
+    grid-area: data;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.2fr 2.6fr 0.9fr 0.2fr;
+    gap: 1px 1px;
+    grid-template-areas: ". . ." ". status-picture ." ". status-message ." ". . .";
+    grid-area: status;
+}
+
+.status-picture {
+    grid-area: status-picture;
+}
+
+.status-message {
+    grid-area: status-message;
+}
+
+.occupancy {
+    display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.2fr 0.6fr 3fr 0.9fr 0.3fr;
+    gap: 1px 1px;
+    grid-template-areas: ". . ." ". current-text ." ". current-count ." ". maximum-occupancy ." ". . .";
+    grid-area: occupancy;
+}
+
+.current-count {
+    grid-area: current-count;
+}
+
+.current-text {
+    grid-area: current-text;
+}
+
+.maximum-occupancy {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "maximum-text maximum-count";
+    grid-area: maximum-occupancy;
+}
+
+.maximum-text {
+    grid-area: maximum-text;
+}
+
+.maximum-count {
+    grid-area: maximum-count;
+}
+
+.misc {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.3fr 0.7fr;
+    gap: 1px 1px;
+    grid-template-areas: "logo-time" "in-out" "add-data";
+    grid-area: misc;
+}
+
+.in-out {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.4fr 0.6fr;
+    gap: 1px 1px;
+    grid-template-areas: "in-count out-count" "in-text out-text";
+    grid-area: in-out;
+}
+
+.in-text {
+    grid-area: in-text;
+}
+
+.out-text {
+    grid-area: out-text;
+}
+
+.in-count {
+    grid-area: in-count;
+}
+
+.out-count {
+    grid-area: out-count;
+}
+
+.logo-time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "time logo";
+    grid-area: logo-time;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.time {
+    grid-area: time;
+}
+
+.add-data {
+    grid-area: add-data;
+}
