@@ -8,7 +8,8 @@
 
 .banner {
     grid-area: banner;
-    background-color: darkgray;
+    background-color: Black;
+    color: #dddddd;
 }
 
 .advertisement {
