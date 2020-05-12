@@ -9,7 +9,7 @@
 
 <div class="grid-container">
     <div class="banner">
-        <marquee id="banner-id"><b>STAY SAFE. WEAR MASK. WASH HANDS. USE SANITIZER</b></marquee>
+        <marquee id="banner-id"></marquee>
     </div>
     <div class="advertisement">
         <img id="advertisement-id" src="get_icon/ad.jpg">
@@ -51,7 +51,9 @@
                 <div class="logo">
                     <img id="logo-id" src="get_icon/logo.png">
                 </div>
-                <div class="time"></div>
+                <div class="time">
+                    <div id="clock"></div>
+                </div>
             </div>
             <div class="add-data">
                 <div class="home">
@@ -86,6 +88,26 @@
 
 
     timer = setInterval(update_screen, 2000);
+    timer2 = setInterval(make_clock, 1000);
+
+    function make_clock() {
+        var date = new Date(); /* creating object of Date class */
+        var hour = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        hour = updateTime(hour);
+        min = updateTime(min);
+        sec = updateTime(sec);
+        document.getElementById("clock").innerText = hour + " : " + min + " : " + sec;
+    }
+
+    function updateTime(k) {
+        if (k < 10) {
+            return "0" + k;
+        } else {
+            return k;
+        }
+    }
 
     function change_add_data(live_status) {
         var device_status = "Active Devices : <br>" + live_status["active_number"] + ' / ' + live_status["total_devices"];
@@ -140,6 +162,9 @@
         }
     }
 
+    function set_banner_text(text) {
+        document.getElementById("banner-id").innerHTML = "<b>" + text + "</b>";
+    }
 
     function update_screen() {
         var xhttp = new XMLHttpRequest();
@@ -155,6 +180,7 @@
                 change_status_icon(response["status"], response["occupancy_color"]);
                 change_add_data(response["live_status"]);
                 play_audio(response["status"], response["audio-stop"], response["audio-go"]);
+                set_banner_text(response["banner-text"]);
             }
         };
 

@@ -131,7 +131,7 @@
                 if (response["success"] == 1) {
                     document.getElementById("offset").value = response["offset"];
                     document.getElementById("maximum-occupancy").value = response["maximum-occupancy"];
-
+                    document.getElementById("banner-text").value = response["banner-text"];
                     if (response["audio-stop"] == 1) {
                         document.getElementById("stop-enable").value = 1;
                     } else {
@@ -164,11 +164,13 @@
         var maximum_occupancy = document.getElementById("maximum-occupancy").value;
         var audio_stop = document.getElementById("stop-enable").value;
         var audio_go = document.getElementById("go-enable").value;
+        var banner_text = document.getElementById("banner-text").value;
         var response = {
             "maximum_occupancy": maximum_occupancy,
             "offset": offset,
             "audio-stop": audio_stop,
-            "audio-go": audio_go
+            "audio-go": audio_go,
+            "banner-text":banner_text
         }
 
         xhttp_post.onreadystatechange = function () {
@@ -236,6 +238,9 @@
             <option value="0">Disable</option>
 
         </select>
+
+        <label for="banner-text"><b>Banner Text</b></label>
+        <input type="text" id="banner-text">
 
         <input type="submit" value="Update" onclick="update_settings()">
     </form>

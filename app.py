@@ -161,7 +161,8 @@ def get_settings_values():
                 "success": 1,
                 "maximum-occupancy": config["maximum_occupancy"],
                 "audio-stop": config["audio-stop"],
-                "audio-go": config["audio-go"]
+                "audio-go": config["audio-go"],
+                "banner-text": config["banner-text"]
             }
             return json.dumps(response)
     elif request.method == 'POST':
@@ -172,7 +173,7 @@ def get_settings_values():
         config["maximum_occupancy"] = int(json_response["maximum_occupancy"])
         config["audio-stop"] = int(json_response["audio-stop"])
         config["audio-go"] = int(json_response["audio-go"])
-
+        config["banner-text"] = json_response["banner-text"]
         if set_config_data(json.dumps(config)) == 0:
             return json.dumps({"success": 0})
         else:
@@ -195,7 +196,8 @@ def hello_name():
         "config_error": False,
         "audio-stop": 1,
         "audio-go": 1,
-        "live_status": get_live_devices()
+        "live_status": get_live_devices(),
+        "banner-text": ""
     }
 
     config = get_config_data()
@@ -213,6 +215,7 @@ def hello_name():
         total_result["occupancy_color"] = "darkgreen"
     total_result["audio-stop"] = config["audio-stop"]
     total_result["audio-go"] = config["audio-go"]
+    total_result["banner-text"] = config["banner-text"]
     total_result["success"] = 1
 
     return json.dumps(total_result)
