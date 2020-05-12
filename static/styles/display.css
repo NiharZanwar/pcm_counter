@@ -322,7 +322,7 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 3vw;
-    color: black;
-    background-color: lightyellow;
+    color: white;
+    /*background-color: lightyellow;*/
     font-weight: bold;
 }
