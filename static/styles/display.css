@@ -8,7 +8,8 @@
 
 .banner {
     grid-area: banner;
-    background-color: darkgray;
+    background-color: black;
+    color: white;
 }
 
 .advertisement {
@@ -296,7 +297,7 @@ div{
 }
 
 body{
-    background-color: lightyellow;
+    background-color: #333333;
 }
 
 #reload-id,#home-id{

@@ -223,7 +223,7 @@ def get_icon(icon):
     return send_from_directory(UPLOAD_FOLDER, icon)
 
 
-@app.route('/show_image', methods=['GET'])
+@app.route('/live_data', methods=['GET'])
 def show_image():
     global device_list
     return str(device_list)
