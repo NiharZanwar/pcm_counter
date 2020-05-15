@@ -323,7 +323,7 @@ def network_settings():
     return render_template('network_settings.html')
 
 
-@app.route('/network_values',methods=['POST','GET'])
+@app.route('/network_values', methods=['POST','GET'])
 def network_values():
     if request.method == 'GET':
         config = get_network_data()
