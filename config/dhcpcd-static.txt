@@ -41,5 +41,9 @@ require dhcp_server_identifier
 slaac private
 
 # Example static IP configuration:
+interface wlan0
+    static ip_address=192.168.4.1/24
+    nohook wpa_supplicant
+
 interface eth0
 
