@@ -129,6 +129,17 @@ def maintain_device_list():
         time.sleep(2)
 
 
+def update_device_update():
+    global device_list
+    while True:
+        for device in device_list:
+            if not device["active"]:
+                response = get_aotc(device["ip"], False)
+                if response["success"] == 1:
+                    device["active"] = True
+        time.sleep(5)
+
+
 @app.route('/home')
 def hello():
     return render_template('display.html')
@@ -280,6 +291,7 @@ def upload_images():
     if request.method == 'POST':
 
         allowed = ['jpg', 'png']
+        allowed_audio = ['mp3']
         if 'ad' in request.files:
             file = request.files['ad']
             try:
@@ -305,6 +317,31 @@ def upload_images():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
             return render_template('upload_images.html')
 
+        if 'go-audio' in request.files:
+
+            file = request.files['go-audio']
+            try:
+                if file.filename.split('.')[1].lower() not in allowed_audio:
+                    return render_template('upload_images.html', data='please upload file with extension ".mp3"')
+            except IndexError:
+                return render_template('upload_images.html', data='please upload 1 file atleast')
+
+            file.filename = 'GO.' + file.filename.split('.')[1].lower()
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            return render_template('upload_images.html')
+
+        if 'stop-audio' in request.files:
+
+            file = request.files['stop-audio']
+            try:
+                if file.filename.split('.')[1].lower() not in allowed_audio:
+                    return render_template('upload_images.html', data='please upload file with extension ".mp3"')
+            except IndexError:
+                return render_template('upload_images.html', data='please upload 1 file atleast')
+
+            file.filename = 'STOP.' + file.filename.split('.')[1].lower()
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            return render_template('upload_images.html')
 
 @app.route('/restart_app', methods=['GET'])
 def restart():
@@ -385,7 +422,9 @@ if __name__ == '__main__':
 
     start_new_thread(print_my_data, ())
     start_new_thread(maintain_device_list, ())
+    start_new_thread(update_device_update, ())
 
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    app.run(host='0.0.0.0', port=5003, debug=True)
 
 

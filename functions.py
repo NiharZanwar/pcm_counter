@@ -12,7 +12,7 @@ def logging(string):
         f.close()
 
 
-def get_aotc(ip):
+def get_aotc(ip, makelog=True):
     url = "http://{}/cgi-bin/GetCounts.cgi?getCounts".format(ip)
     # print(url)
     data = {
@@ -38,7 +38,8 @@ def get_aotc(ip):
         return data
 
     except Exception as e:
-        logging("Error - {}".format(e))
+        if makelog:
+            logging("Error - {}".format(e))
         data["success"] = 0
         return data
 

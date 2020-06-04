@@ -68,7 +68,7 @@ body {
   <a href="/" class="active">Home</a>
   <a href="/configuration">Configuration</a>
   <a href="/settings">Settings</a>
-  <a href="/upload_images">Change Images</a>
+  <a href="/upload_images">Upload Files</a>
     <a href="/network_settings">Network</a>
     <a href="/home">Display</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -86,6 +86,16 @@ body {
 <form method="POST" enctype="multipart/form-data" action="/upload_images">
     <input type="file" name="logo">
     <input type="submit" value="Upload logo">
+</form>
+<h1>Upload mp3 file for audio to play when occupancy is <b>less</b> than maximum occupancy</h1>
+<form method="POST" enctype="multipart/form-data" action="/upload_images">
+    <input type="file" name="go-audio">
+    <input type="submit" value="Upload .mp3">
+</form>
+<h1>Upload mp3 file for audio to play when occupancy is <b>greater</b> than maximum occupancy</h1>
+<form method="POST" enctype="multipart/form-data" action="/upload_images">
+    <input type="file" name="stop-audio">
+    <input type="submit" value="Upload .mp3">
 </form>
 {{ data }}
 </body>
