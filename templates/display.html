@@ -6,7 +6,7 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/display.css') }}">
-
+<body onload="initialize_audio()">
 <div class="grid-container">
     <div class="banner">
         <marquee id="banner-id"></marquee>
@@ -89,6 +89,10 @@
 
     timer = setInterval(update_screen, 2000);
     timer2 = setInterval(make_clock, 1000);
+
+    function initialize_audio() {
+        play_audio("GO", 1,1);
+    }
 
     function make_clock() {
         var date = new Date(); /* creating object of Date class */
