@@ -1,1 +1,1 @@
-{"number_of_devices": 1, "device_ip": ["192.168.1.100"], "maximum_occupancy": 3, "relative_offset": 0, "live_offset": 0, "name": "test-device", "success": 1, "audio-stop": 1, "audio-go": 1, "banner-text": "Follow Social Distancing. Wear Mask"}
+{"number_of_devices": 1, "device_ip": ["192.168.1.100"], "maximum_occupancy": 3, "relative_offset": 2, "live_offset": 0, "name": "test-device", "success": 1, "audio-stop": 1, "audio-go": 1, "banner-text": "Follow Social Distancing. Wear Mask", "relay-function": 1}
