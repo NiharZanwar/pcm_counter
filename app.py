@@ -173,7 +173,8 @@ def get_settings_values():
                 "maximum-occupancy": config["maximum_occupancy"],
                 "audio-stop": config["audio-stop"],
                 "audio-go": config["audio-go"],
-                "banner-text": config["banner-text"]
+                "banner-text": config["banner-text"],
+                "relay-function": config["relay-function"]
             }
             return json.dumps(response)
     elif request.method == 'POST':
@@ -184,6 +185,7 @@ def get_settings_values():
         config["maximum_occupancy"] = int(json_response["maximum_occupancy"])
         config["audio-stop"] = int(json_response["audio-stop"])
         config["audio-go"] = int(json_response["audio-go"])
+        config["relay-function"] = int(json_response["relay-function"])
         config["banner-text"] = json_response["banner-text"]
         if set_config_data(json.dumps(config)) == 0:
             return json.dumps({"success": 0})
@@ -193,7 +195,7 @@ def get_settings_values():
 
 @app.route('/update_screen', methods=['GET'])
 def hello_name():
-    global total_all_occ, total_all_out, total_all_in
+    global total_all_occ, total_all_out, total_all_in, live_max_offset
 
     total_result = {
         "success": 0,
@@ -208,7 +210,8 @@ def hello_name():
         "audio-stop": 1,
         "audio-go": 1,
         "live_status": get_live_devices(),
-        "banner-text": ""
+        "banner-text": "",
+        "relay-function": 0
     }
 
     config = get_config_data()
@@ -216,9 +219,9 @@ def hello_name():
         total_result["config_error"] = True
 
     total_result["occupancy"] = total_all_occ - config["relative_offset"]
-    total_result["maximum_occupancy"] = config["maximum_occupancy"]
+    total_result["maximum_occupancy"] = config["maximum_occupancy"] + live_max_offset
 
-    if total_result["occupancy"] >= config["maximum_occupancy"]:
+    if total_result["occupancy"] >= total_result["maximum_occupancy"]:
         total_result["status"] = "STOP"
         total_result["occupancy_color"] = "darkred"
     else:
@@ -227,6 +230,7 @@ def hello_name():
     total_result["audio-stop"] = config["audio-stop"]
     total_result["audio-go"] = config["audio-go"]
     total_result["banner-text"] = config["banner-text"]
+    total_result["relay-function"] = config["relay-function"]
     total_result["success"] = 1
 
     return json.dumps(total_result)
@@ -343,6 +347,7 @@ def upload_images():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
             return render_template('upload_images.html')
 
+
 @app.route('/restart_app', methods=['GET'])
 def restart():
     restart_app()
@@ -360,7 +365,7 @@ def network_settings():
     return render_template('network_settings.html')
 
 
-@app.route('/network_values', methods=['POST','GET'])
+@app.route('/network_values', methods=['POST', 'GET'])
 def network_values():
     if request.method == 'GET':
         config = get_network_data()
@@ -404,14 +409,33 @@ def testing():
     return render_template('testing.html')
 
 
+@app.route('/add_max', methods=['POST'])
+def add_max():
+    global live_max_offset
+    live_max_offset += 1
+    return ''
+
+
+@app.route('/sub_max', methods=['POST'])
+def sub_max():
+    global live_max_offset
+    live_max_offset -= 1
+    return ''
+
+@app.route('/live_max')
+def live_max_occupancy():
+    return render_template('live_occupancy.html')
+
+
 if __name__ == '__main__':
 
     global device_list
     global total_all_occ
     total_all_occ = 0
-    global total_all_in, total_all_out
+    global total_all_in, total_all_out, live_max_offset
     total_all_in = 0
     total_all_out = 0
+    live_max_offset = 0
     while 1:
         device_list = get_device_list()
         if device_list == 0:
