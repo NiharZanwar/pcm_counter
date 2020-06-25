@@ -183,6 +183,6 @@ if __name__ == '__main__':
     start_new_thread(update_device_status, ())
 
     while 1:
-        print(get_occupancy_data()['occupancy'])
+        print(get_occupancy_data())
         time.sleep(1)
 
