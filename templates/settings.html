@@ -154,6 +154,18 @@
                         document.getElementById("go-enable").value = 0;
                     }
 
+                    if (response["relay-function"] == 1) {
+                        document.getElementById("relay-function").value = 1;
+                    } else {
+                        document.getElementById("relay-function").value = 0;
+                    }
+
+                    if (response["theme"] == "dark") {
+                        document.getElementById("theme").value = "dark";
+                    } else {
+                        document.getElementById("theme").value = "light";
+                    }
+
                 } else {
                     alert("error while reading config file");
                 }
@@ -174,13 +186,17 @@
         var maximum_occupancy = document.getElementById("maximum-occupancy").value;
         var audio_stop = document.getElementById("stop-enable").value;
         var audio_go = document.getElementById("go-enable").value;
+        var relay_function = document.getElementById("relay-function").value;
         var banner_text = document.getElementById("banner-text").value;
+        var theme = document.getElementById("theme").value;
         var response = {
             "maximum_occupancy": maximum_occupancy,
             "offset": offset,
             "audio-stop": audio_stop,
             "audio-go": audio_go,
-            "banner-text":banner_text
+            "banner-text":banner_text,
+            "relay-function":relay_function,
+            "theme":theme
         }
 
         xhttp_post.onreadystatechange = function () {
@@ -246,6 +262,20 @@
         <select id="go-enable">
             <option value="1">Enable</option>
             <option value="0">Disable</option>
+
+        </select>
+
+        <label for="relay-function"><b>Door Control/Relay Function</b></label>
+        <select id="relay-function">
+            <option value="1">Enable</option>
+            <option value="0">Disable</option>
+
+        </select>
+
+        <label for="theme"><b>Door Control/Relay Function</b></label>
+        <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
 
         </select>
 

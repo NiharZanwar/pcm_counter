@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width">
+    <title>SmartIAM | Occupancy Display</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+</head>
+
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='display.css') }}"> -->
+
+<body class="" onload="initialize_audio()">
+
+<div class="main_body">
+
+    <div class="site_id">
+
+        <div class="visitors_wrap">
+            <div class="in_wrap">
+                <div class="in-text">Visitors</div>
+                <div class="in-count">
+                    <div id="in-count-id"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="add-data">
+            <div class="home">
+                <a href="/" title="Settings">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="reload" title="Reload" onclick="reload_screen()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </div>
+
+            <div class="logo">
+                <img id="logo-id" title="Smart IAM" alt="Smart IAM" src="{{ url_for('static',filename='logo.png') }}">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="grid-container">
+
+        <div class="banner">
+            <marquee id="banner-id">
+
+            </marquee>
+        </div>
+
+        <div class="status_wrap col-sm-50 col-50">
+            <div class="status card status_card status-go" title="Status Info">
+                <div class="status-picture">
+                    <div class="status_word" id="status-message-icon-id"></div>
+                </div>
+                <!-- <div class="status-picture red_grad_dark">
+                    <div class="status_word" id="status-message-icon-id">STOP</div>
+                </div> -->
+                <div class="status-message">
+                    <div id="status-message-text-id">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="occupancy_wrap col-sm-50 col-50">
+            <div class="occupancy card occupancy_card" title="Occupancy">
+
+                <div class="progress" id="progress"></div>
+                <br><br>
+                <div class="maximum-occupancy">
+                    <div class="maximum-text"><h2>Maximum Occupancy</h2></div>
+                    <div class="maximum-count">
+                        <div id="max-count-id"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<audio id="stop-audio">
+    <source src="/get_icon/STOP.mp3" type="audio/mpeg">
+</audio>
+<audio id="go-audio">
+    <source src="/get_icon/GO.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- Included on 25-Jun-20  -->
+<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+<script>
+
+    function initialize_audio() {
+        play_audio("GO", 1, 1);
+    }
+
+
+    function change_occupancy_max_count(value) {
+        document.getElementById("max-count-id").innerHTML = "<h1><b>" + value + "</b></h1>";
+    }
+
+    function change_in_out_color(value_in) {
+        document.getElementById("in-count-id").innerHTML = "<b>" + value_in + "</b>";
+    }
+
+
+    function play_audio(status, stop_enable, go_enable) {
+        var stop_audio = document.getElementById('stop-audio');
+        var go_audio = document.getElementById('go-audio');
+        if ((stop_audio.duration > 0 && !stop_audio.paused) || (go_audio.duration > 0 && !go_audio.paused)) {
+            return 0;
+            //Its playing...do your job
+
+        } else {
+            if (status == "STOP" && (stop_enable == 1)) {
+                stop_audio.play();
+                return 0;
+            }
+            if (status == "GO" && (go_enable == 1)) {
+                go_audio.play();
+                return 0;
+            } else {
+                return 0;
+            }
+            //Not playing...maybe paused, stopped or never played.
+
+        }
+    }
+
+    function set_banner_text(text) {
+        document.getElementById("banner-id").innerHTML = "<b>" + text + "</b>";
+    }
+
+    function reload_screen() {
+        location.reload();
+    }
+</script>
+
+<!-- Included on 24-Jun-20 -->
+<script src="{{ url_for('static',filename='js/progressbar.min.js') }}">
+</script>
+<script>
+    var circle;
+    window.onload = function onLoad() {
+        circle = new ProgressBar.Circle('#progress', {
+            strokeWidth: 6,
+            from: {
+                color: '#4aea05'
+            },
+            to: {
+                color: '#ff1e00'
+            },
+            trailColor: 'rgba(150,150,150,0.15)',
+            trailWidth: 5,
+            duration: 1000,
+            easing: 'easeOut',
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                var value = 0;
+                if (value === 0) {
+                    circle.setText('0');
+                }
+
+            }
+        });
+    }
+
+    function change_theme() {
+        $('body').toggleClass('dark_theme');
+    }
+
+    function showProgress(progress, maxLimit, circle) {
+
+        var currentProgress = (progress / maxLimit);
+
+        if (currentProgress > 1) {
+            console.log('Cant go further, Max Limit reached', maxLimit);
+            currentProgress = 1;
+        }
+        console.log(currentProgress);
+
+        circle.animate(currentProgress, {
+            step: function (state, bar) {
+                bar.path.setAttribute('stroke', state.color);
+
+                var value = Math.round(currentProgress * maxLimit);
+                if (value === 0) {
+                    bar.setText('0');
+                } else {
+                    bar.setText(progress);
+                }
+
+            }
+        });
+
+
+    }
+
+    function changeStatus(status) {
+        var obj = $('.status_card');
+
+        if (status === 'GO') {
+            $(obj).removeClass('status-stop').addClass('status-go');
+            $('#status-message-icon-id').text('ENTER');
+            $('#status-message-text-id p').text('Welcome to our store!');
+        } else if (status === 'STOP') {
+            $(obj).removeClass('status-go').addClass('status-stop');
+            $('#status-message-icon-id').text('WAIT');
+            $('#status-message-text-id p').text('Maximum occupancy reached');
+        }
+    }
+
+
+    setInterval(update_screen, 2000);
+
+    var initial_theme = "light"
+
+    function update_screen() {
+
+        var xhttp = new XMLHttpRequest({
+            mozSystem: true
+        });
+
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                let response = JSON.parse(xhttp.responseText);
+
+                changeStatus(response["status"]);
+                showProgress(response["occupancy"], response["maximum_occupancy"], circle);
+                change_occupancy_max_count(response["maximum_occupancy"]);
+                change_in_out_color(response["in"]);
+                play_audio(response["status"], response["audio-stop"], response["audio-go"]);
+                set_banner_text(response["banner-text"]);
+
+                if (response["theme"] === "dark" && initial_theme !== "dark") {
+                    console.log("theme changed dark")
+                    initial_theme = "dark"
+                    change_theme();
+                }
+                if (response["theme"] === "light" && initial_theme !== "light") {
+                    initial_theme = "light"
+                    console.log("theme changed light")
+                    change_theme();
+
+                }
+            }
+        };
+
+        xhttp.open("GET", "update_screen", true);
+        xhttp.send(null);
+    }
+</script>
+
+</body>
+
+</html>
