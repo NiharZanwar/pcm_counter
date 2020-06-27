@@ -174,7 +174,8 @@ def get_settings_values():
                 "audio-stop": config["audio-stop"],
                 "audio-go": config["audio-go"],
                 "banner-text": config["banner-text"],
-                "relay-function": config["relay-function"]
+                "relay-function": config["relay-function"],
+                "theme":config["theme"]
             }
             return json.dumps(response)
     elif request.method == 'POST':
@@ -187,6 +188,7 @@ def get_settings_values():
         config["audio-go"] = int(json_response["audio-go"])
         config["relay-function"] = int(json_response["relay-function"])
         config["banner-text"] = json_response["banner-text"]
+        config["theme"] = json_response["theme"]
         if set_config_data(json.dumps(config)) == 0:
             return json.dumps({"success": 0})
         else:
@@ -211,7 +213,8 @@ def hello_name():
         "audio-go": 1,
         "live_status": get_live_devices(),
         "banner-text": "",
-        "relay-function": 0
+        "relay-function": 0,
+        "theme":"dark"
     }
 
     config = get_config_data()
@@ -227,6 +230,8 @@ def hello_name():
     else:
         total_result["status"] = "GO"
         total_result["occupancy_color"] = "darkgreen"
+
+    total_result["theme"] = config["theme"]
     total_result["audio-stop"] = config["audio-stop"]
     total_result["audio-go"] = config["audio-go"]
     total_result["banner-text"] = config["banner-text"]
