@@ -1,121 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>display</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width">
+    <title>SmartIAM | Occupancy Display</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
 </head>
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/testing.css') }}">
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='display.css') }}"> -->
 
-<div class="grid-container">
-    <div class="banner">
-        <marquee id="banner-id"><b>STAY SAFE. WEAR MASK. WASH HANDS. USE SANITIZER</b></marquee>
-    </div>
-    <div class="advertisement">
-        <img id="advertisement-id" src="get_icon/ad.jpg">
-    </div>
-    <div class="border"></div>
-    <div class="data">
-        <div class="status">
-            <div class="status-picture">
-                <div id="status-message-icon-id"></div>
-            </div>
-            <div class="status-message">
-                <div id="status-message-text-id"></div>
-            </div>
-        </div>
-        <div class="occupancy">
-            <div class="current-count">
-                <div id="current-count-id"></div>
-            </div>
-            <div class="current-text">CURRENT OCCUPANCY</div>
-            <div class="maximum-occupancy">
-                <div class="maximum-text">MAX OCCUPANCY</div>
-                <div class="maximum-count">
-                    <div id="max-count-id"></div>
-                </div>
-            </div>
-        </div>
-        <div class="misc">
-            <div class="in-out">
-                <div class="in-text">IN</div>
-                <div class="out-text">OUT</div>
+<body class="" onload="initialize_audio()">
+
+<div class="main_body">
+
+    <div class="site_id">
+
+        <div class="visitors_wrap">
+            <div class="in_wrap">
+                <div class="in-text">Visitors</div>
                 <div class="in-count">
                     <div id="in-count-id"></div>
                 </div>
-                <div class="out-count">
-                    <div id="out-count-id"></div>
-                </div>
             </div>
-            <div class="logo-time">
-                <div class="logo">
-                    <img id="logo-id" src="get_icon/logo.png">
-                </div>
-                <div class="time"></div>
+        </div>
+
+
+        <div class="add-data">
+            <div class="home">
+                <a href="/" title="Settings">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
             </div>
-            <div class="add-data">
-                <div class="home">
-                    <a href="/">
-                        <img id="home-id" src="get_icon/settings.png">
-                    </a>
+            <div class="reload" title="Reload" onclick="reload_screen()">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+            </div>
+
+            <div class="logo">
+                <img id="logo-id" title="Smart IAM" alt="Smart IAM" src="{{ url_for('static',filename='logo.png') }}">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="grid-container">
+
+        <div class="banner">
+            <marquee id="banner-id">
+
+            </marquee>
+        </div>
+
+        <div class="status_wrap col-sm-50 col-50">
+            <div class="status card status_card status-go" title="Status Info">
+                <div class="status-picture">
+                    <div class="status_word" id="status-message-icon-id"></div>
                 </div>
-                <div class="reload" onclick="reload_screen()">
-                    <img id="reload-id" src="get_icon/reload.png">
-                </div>
-                <div class="add-data-text">
-                    <div id="add-data-id"></div>
+                <!-- <div class="status-picture red_grad_dark">
+                    <div class="status_word" id="status-message-icon-id">STOP</div>
+                </div> -->
+                <div class="status-message">
+                    <div id="status-message-text-id">
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="occupancy_wrap col-sm-50 col-50">
+            <div class="occupancy card occupancy_card" title="Occupancy">
+
+                <div class="progress" id="progress"></div>
+                <br><br>
+                <div class="maximum-occupancy">
+                    <div class="maximum-text"><h2>Maximum Occupancy</h2></div>
+                    <div class="maximum-count">
+                        <div id="max-count-id"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>
 
 
 <audio id="stop-audio">
     <source src="/get_icon/STOP.mp3" type="audio/mpeg">
-    <!--    <source src="/get_icon/GO.mp3" type="audio/mpeg">-->
 </audio>
 <audio id="go-audio">
-    <!--    <source src="/get_icon/STOP.mp3" type="audio/mpeg">-->
     <source src="/get_icon/GO.mp3" type="audio/mpeg">
 </audio>
 
-</body>
 
+<!-- Included on 25-Jun-20  -->
+<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 <script>
 
-
-    timer = setInterval(update_screen, 2000);
-
-    function change_add_data(live_status) {
-        var device_status = "Active Devices : <br>" + live_status["active_number"] + ' / ' + live_status["total_devices"];
-        document.getElementById("add-data-id").innerHTML = device_status;
+    function initialize_audio() {
+        play_audio("GO", 1, 1);
     }
 
-    function change_occupancy_color(color, value) {
-        document.getElementById("current-count-id").innerHTML = "<style>#current-count-id{" +
-            "background-color: " + color + "}</style>" + value;
-    }
-
-    function change_status_color(color, value) {
-        document.getElementById("status-message-text-id").innerHTML = "<style>#status-message-text-id{" +
-            "background-color: " + color + "}</style>" + value;
-    }
 
     function change_occupancy_max_count(value) {
-        document.getElementById("max-count-id").innerHTML = value;
+        document.getElementById("max-count-id").innerHTML = "<h1><b>" + value + "</b></h1>";
     }
 
-    function change_in_out_color(value_in, value_out) {
-        document.getElementById("in-count-id").innerHTML = value_in;
-        document.getElementById("out-count-id").innerHTML = value_out;
+    function change_in_out_color(value_in) {
+        document.getElementById("in-count-id").innerHTML = "<b>" + value_in + "</b>";
     }
 
-    function change_status_icon(status, color) {
-        document.getElementById("status-message-icon-id").innerHTML = "<img src=\"/get_icon/" + status + ".png" + "\" >" +
-            "<style>#status-message-icon-id{" +
-            "background-color: " + "white" + "}</style>";
-    }
 
     function play_audio(status, stop_enable, go_enable) {
         var stop_audio = document.getElementById('stop-audio');
@@ -140,31 +137,131 @@
         }
     }
 
+    function set_banner_text(text) {
+        document.getElementById("banner-id").innerHTML = "<b>" + text + "</b>";
+    }
+
+    function reload_screen() {
+        location.reload();
+    }
+</script>
+
+<!-- Included on 24-Jun-20 -->
+<script src="{{ url_for('static',filename='js/progressbar.min.js') }}">
+</script>
+<script>
+    var circle;
+    window.onload = function onLoad() {
+        circle = new ProgressBar.Circle('#progress', {
+            strokeWidth: 6,
+            from: {
+                color: '#4aea05'
+            },
+            to: {
+                color: '#ff1e00'
+            },
+            trailColor: 'rgba(150,150,150,0.15)',
+            trailWidth: 5,
+            duration: 1000,
+            easing: 'easeOut',
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+                var value = 0;
+                if (value === 0) {
+                    circle.setText('0');
+                }
+
+            }
+        });
+    }
+
+    function change_theme() {
+        $('body').toggleClass('dark_theme');
+    }
+
+    function showProgress(progress, maxLimit, circle) {
+
+        var currentProgress = (progress / maxLimit);
+
+        if (currentProgress > 1) {
+            console.log('Cant go further, Max Limit reached', maxLimit);
+            currentProgress = 1;
+        }
+        console.log(currentProgress);
+
+        circle.animate(currentProgress, {
+            step: function (state, bar) {
+                bar.path.setAttribute('stroke', state.color);
+
+                var value = Math.round(currentProgress * maxLimit);
+                if (value === 0) {
+                    bar.setText('0');
+                } else {
+                    bar.setText(progress);
+                }
+
+            }
+        });
+
+
+    }
+
+    function changeStatus(status) {
+        var obj = $('.status_card');
+
+        if (status === 'GO') {
+            $(obj).removeClass('status-stop').addClass('status-go');
+            $('#status-message-icon-id').text('ENTER');
+            $('#status-message-text-id p').text('Welcome to our store!');
+        } else if (status === 'STOP') {
+            $(obj).removeClass('status-go').addClass('status-stop');
+            $('#status-message-icon-id').text('WAIT');
+            $('#status-message-text-id p').text('Maximum occupancy reached');
+        }
+    }
+
+
+    setInterval(update_screen, 2000);
+
+    var initial_theme = "light"
 
     function update_screen() {
-        var xhttp = new XMLHttpRequest();
+
+        var xhttp = new XMLHttpRequest({
+            mozSystem: true
+        });
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
 
                 let response = JSON.parse(xhttp.responseText);
-                change_occupancy_color(response["occupancy_color"], response["occupancy"]);
-                change_status_color(response["occupancy_color"], response["status"]);
+
+                changeStatus(response["status"]);
+                showProgress(response["occupancy"], response["maximum_occupancy"], circle);
                 change_occupancy_max_count(response["maximum_occupancy"]);
-                change_in_out_color(response["in"], response["out"]);
-                change_status_icon(response["status"], response["occupancy_color"]);
-                change_add_data(response["live_status"]);
+                change_in_out_color(response["in"]);
                 play_audio(response["status"], response["audio-stop"], response["audio-go"]);
+                set_banner_text(response["banner-text"]);
+
+                if (response["theme"] === "dark" && initial_theme !== "dark") {
+                    console.log("theme changed dark")
+                    initial_theme = "dark"
+                    change_theme();
+                }
+                if (response["theme"] === "light" && initial_theme !== "light") {
+                    initial_theme = "light"
+                    console.log("theme changed light")
+                    change_theme();
+
+                }
             }
         };
 
         xhttp.open("GET", "update_screen", true);
         xhttp.send(null);
     }
-
-
-    function reload_screen() {
-        location.reload();
-    }
 </script>
+
+</body>
+
 </html>

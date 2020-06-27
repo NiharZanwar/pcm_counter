@@ -2,7 +2,7 @@ from flask import Flask, render_template, send_from_directory, request
 import time
 import json
 import os
-from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password,\
+from functions import get_aotc, get_device_list, get_day_count, get_config_data, set_config_data, check_password, \
     restart_app, logging, get_network_data, set_network_data, restart_network
 from _thread import *
 from datetime import datetime
@@ -60,7 +60,7 @@ def get_final_realtime_counts():
                 print("five min  crossed")
             else:
                 device_list[i]["final_in"] = device_list[i]["today_latest_in"] + (
-                            device_list[i]["now_aotc_in"] - device_list[i]["aotc_in_old"])
+                        device_list[i]["now_aotc_in"] - device_list[i]["aotc_in_old"])
 
             if device_list[i]["today_latest_out"] != device_list[i]["today_latest_out_old"]:
                 device_list[i]["aotc_out_old"] = device_list[i]["now_aotc_out"]
@@ -69,7 +69,7 @@ def get_final_realtime_counts():
                 print("five min  crossed")
             else:
                 device_list[i]["final_out"] = device_list[i]["today_latest_out"] + (
-                            device_list[i]["now_aotc_out"] - device_list[i]["aotc_out_old"])
+                        device_list[i]["now_aotc_out"] - device_list[i]["aotc_out_old"])
             device_list[i]["final_occ"] = device_list[i]["final_in"] - device_list[i]["final_out"]
             # print("Poll data", device_list)
 
@@ -174,7 +174,8 @@ def get_settings_values():
                 "audio-stop": config["audio-stop"],
                 "audio-go": config["audio-go"],
                 "banner-text": config["banner-text"],
-                "relay-function": config["relay-function"]
+                "relay-function": config["relay-function"],
+                "theme":config["theme"]
             }
             return json.dumps(response)
     elif request.method == 'POST':
@@ -187,6 +188,7 @@ def get_settings_values():
         config["audio-go"] = int(json_response["audio-go"])
         config["relay-function"] = int(json_response["relay-function"])
         config["banner-text"] = json_response["banner-text"]
+        config["theme"] = json_response["theme"]
         if set_config_data(json.dumps(config)) == 0:
             return json.dumps({"success": 0})
         else:
@@ -211,7 +213,8 @@ def hello_name():
         "audio-go": 1,
         "live_status": get_live_devices(),
         "banner-text": "",
-        "relay-function": 0
+        "relay-function": 0,
+        "theme":"dark"
     }
 
     config = get_config_data()
@@ -227,6 +230,8 @@ def hello_name():
     else:
         total_result["status"] = "GO"
         total_result["occupancy_color"] = "darkgreen"
+
+    total_result["theme"] = config["theme"]
     total_result["audio-stop"] = config["audio-stop"]
     total_result["audio-go"] = config["audio-go"]
     total_result["banner-text"] = config["banner-text"]
