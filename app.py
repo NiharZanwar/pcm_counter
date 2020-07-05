@@ -142,7 +142,7 @@ def update_device_update():
 
 @app.route('/home')
 def hello():
-    return render_template('display.html')
+    return render_template('testing.html')
 
 
 @app.route('/', methods=['GET'])
