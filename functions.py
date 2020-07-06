@@ -190,3 +190,20 @@ def restart_network():
     except Exception as e:
         logging("error while writing to dhcpcd-dynamic.txt - {}".format(e))
         return 0
+
+
+def reset_pcm_device():
+
+    config = get_config_data()
+    if config == 0:
+        return 0
+
+    try:
+        for ip in config["device_ip"]:
+            url = 'http://{}/cgi-bin/GetCounts.cgi?resetCounts'.format(ip)
+            response = requests.get(url)
+            print(response.status_code)
+            return 1
+    except Exception as error:
+        logging("error while resetting pcm device - {}".format(error))
+        return 0

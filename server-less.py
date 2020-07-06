@@ -1,6 +1,13 @@
 from functions import *
 import time
 from _thread import *
+import logging
+from socketserver import TCPServer
+from collections import defaultdict
+
+from umodbus import conf
+from umodbus.server.tcp import RequestHandler, get_server
+from umodbus.utils import log_to_stream
 
 
 def print_my_data():
@@ -46,7 +53,7 @@ def get_final_realtime_counts():
 
 def maintain_device_list():
     global device_list
-
+    global aotc_in, aotc_out
     for device in device_list:
 
         result = get_aotc(device["ip"])
@@ -68,6 +75,10 @@ def maintain_device_list():
                 device["now_aotc"] = response["occupancy"]
                 device["now_aotc_in"] = response["in"]
                 device["now_aotc_out"] = response["out"]
+
+                aotc_in = response["in"]
+                aotc_out = response["out"]
+
                 try:
                     date = {
                         "day": response["datetime"].split(' ')[0].split('/')[1],
@@ -113,6 +124,7 @@ def get_live_devices():
 
     return response
 
+
 def get_occupancy_data():
     global total_all_occ, total_all_out, total_all_in, live_max_offset
     total_result = {
@@ -150,6 +162,7 @@ def get_occupancy_data():
 
     return total_result
 
+
 def update_device_status():
     global device_list
     while True:
@@ -169,6 +182,11 @@ if __name__ == '__main__':
     total_all_in = 0
     total_all_out = 0
     live_max_offset = 0
+
+    global aotc_in, aotc_out
+    aotc_in = 0
+    aotc_out = 0
+
     while 1:
         device_list = get_device_list()
         if device_list == 0:
@@ -182,7 +200,45 @@ if __name__ == '__main__':
     start_new_thread(maintain_device_list, ())
     start_new_thread(update_device_status, ())
 
-    while 1:
-        print(get_occupancy_data())
-        time.sleep(1)
+    TCPServer.allow_reuse_address = True
+    app = get_server(TCPServer, ('0.0.0.0', 7000), RequestHandler)
+    data_store = defaultdict(int)
 
+
+    @app.route(slave_ids=[1], function_codes=[3, 4], addresses=list(range(0, 10)))
+    def read_data_store(slave_id, function_code, address):
+        """" Return value of address. """
+        data_store[0] = total_all_in
+        data_store[1] = total_all_out
+        # data_store[4] = total_all_occ
+        data_store[2] = aotc_in
+        data_store[3] = aotc_out
+
+        print(total_all_occ)
+        if aotc_in > 32767:
+            data_store[2] = aotc_in % 32767
+        if aotc_in < -32768:
+            data_store[2] = abs(aotc_in % -32768)
+        if aotc_out > 32767:
+            data_store[3] = aotc_in % 32767
+        if aotc_out < -32768:
+            data_store[3] = abs(aotc_in % -32768)
+
+        return data_store[address]
+
+
+    @app.route(slave_ids=[1], function_codes=[6, 16], addresses=list(range(2, 4)))
+    def write_data_store(slave_id, function_code, address, value):
+        """" Set value for address. """
+        if reset_pcm_device() == 0:
+            logging("tried to reset pcm device but not successful")
+            print("reset unsuccessful")
+        else:
+            print("reset successful")
+
+    try:
+        app.serve_forever()
+        print("app has started")
+    finally:
+        app.shutdown()
+        app.server_close()
