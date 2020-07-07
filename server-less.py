@@ -236,9 +236,11 @@ if __name__ == '__main__':
         else:
             print("reset successful")
 
-    try:
-        app.serve_forever()
-        print("app has started")
-    finally:
-        app.shutdown()
-        app.server_close()
+
+    while True:
+        try:
+            app.serve_forever()
+            print("app has started")
+        finally:
+            app.shutdown()
+            app.server_close()
