@@ -197,7 +197,7 @@ def get_settings_values():
 
 @app.route('/update_screen', methods=['GET'])
 def hello_name():
-    global total_all_occ, total_all_out, total_all_in, live_max_offset
+    global total_all_occ, total_all_out, total_all_in, live_max_offset, neg_correction
 
     total_result = {
         "success": 0,
@@ -221,7 +221,10 @@ def hello_name():
     if config == 0:
         total_result["config_error"] = True
 
-    total_result["occupancy"] = total_all_occ - config["relative_offset"]
+    if total_all_occ - config["relative_offset"] < neg_correction:
+        neg_correction = total_all_occ - config["relative_offset"]
+
+    total_result["occupancy"] = total_all_occ - config["relative_offset"] - neg_correction
     total_result["maximum_occupancy"] = config["maximum_occupancy"] + live_max_offset
 
     if total_result["occupancy"] >= total_result["maximum_occupancy"]:
@@ -438,6 +441,8 @@ if __name__ == '__main__':
     global total_all_occ
     total_all_occ = 0
     global total_all_in, total_all_out, live_max_offset
+    global neg_correction
+    neg_correction = 0
     total_all_in = 0
     total_all_out = 0
     live_max_offset = 0
